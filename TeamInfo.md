@@ -12,8 +12,8 @@
 | Member1     |    sshinde2@illinois.edu   |
 | Member2     |        Aryaman Nasare     |
 | Member2     |   libin2@illinois.edu  |
-| Member3     |        Lee        |
-| Member3     |   __@illinois.edu  |
+| Member3     |        Lijun Zhu       |
+| Member3     |   lijunz2@illinois.edu  |
 
 ## Project Information
 
