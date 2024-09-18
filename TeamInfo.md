@@ -9,9 +9,9 @@
 | Captain     |       Sunveg Nalwar     |
 | Captain     |   snalwar2@illinois.edu |
 | Member1     |       Sudarshan Shinde      |
-| Member1     |    sshinde2@illinois.edu   |
+| Member1     |    sshinde5@illinois.edu   |
 | Member2     |        Aryaman Nasare     |
-| Member2     |   libin2@illinois.edu  |
+| Member2     |   nasare2@illinois.edu  |
 | Member3     |        Lijun Zhu       |
 | Member3     |   lijunz2@illinois.edu  |
 
