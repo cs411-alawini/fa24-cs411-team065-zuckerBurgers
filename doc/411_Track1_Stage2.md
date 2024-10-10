@@ -1,4 +1,4 @@
-# UML Diagram
+## UML Diagram
 <img src="./stage2_UML.png" >
 
 ## Entities and Assumptions
