@@ -1,201 +1,201 @@
-ServiceID,VendorID,ServiceName,Price
-1,678,Catering,569
-2,961,Sound,1822
-3,582,Sound,1293
-4,856,Decor,353
-5,961,Decor,215
-6,797,Sound,248
-7,688,Sound,378
-8,381,Sound,1570
-9,55,Catering,705
-10,90,Food,225
-11,352,Decor,1707
-12,72,Sound,1908
-13,589,Lights,1139
-14,297,Catering,1968
-15,990,Decor,1656
-16,586,Catering,807
-17,102,Food,258
-18,748,Lights,691
-19,963,Sanitation,827
-20,960,Food,294
-21,95,Food,756
-22,384,Food,1986
-23,111,Sanitation,997
-24,492,Catering,60
-25,397,Food,697
-26,536,Sound,320
-27,753,Sanitation,1937
-28,98,Lights,1415
-29,403,Food,1749
-30,282,Decor,926
-31,505,Sanitation,598
-32,720,Lights,1384
-33,360,Sanitation,195
-34,122,Decor,575
-35,449,Decor,206
-36,637,Lights,752
-37,607,Catering,226
-38,383,Sound,1533
-39,677,Lights,580
-40,661,Sound,123
-41,38,Sanitation,1865
-42,774,Catering,1998
-43,209,Sanitation,1719
-44,259,Sound,257
-45,752,Lights,660
-46,113,Lights,612
-47,395,Catering,767
-48,373,Food,1341
-49,777,Catering,1657
-50,345,Decor,1861
-51,89,Lights,1805
-52,590,Decor,1507
-53,399,Catering,475
-54,63,Catering,1324
-55,36,Lights,1657
-56,715,Sound,382
-57,876,Sound,900
-58,781,Lights,1377
-59,282,Lights,1180
-60,710,Sanitation,1804
-61,501,Sound,1118
-62,812,Decor,1768
-63,779,Food,622
-64,79,Catering,122
-65,662,Lights,1398
-66,673,Lights,468
-67,524,Sound,1515
-68,801,Lights,171
-69,668,Food,1114
-70,858,Sanitation,388
-71,189,Food,847
-72,702,Sound,1290
-73,22,Catering,1631
-74,99,Sound,1003
-75,760,Sound,240
-76,178,Food,1690
-77,91,Decor,1003
-78,3,Sound,512
-79,958,Sanitation,583
-80,510,Food,761
-81,517,Catering,1112
-82,724,Food,1857
-83,72,Lights,1570
-84,857,Lights,1615
-85,102,Lights,592
-86,476,Lights,113
-87,94,Decor,1581
-88,613,Sound,1797
-89,549,Catering,79
-90,197,Sound,158
-91,866,Food,1795
-92,764,Sanitation,1379
-93,195,Sanitation,991
-94,56,Sanitation,186
-95,563,Lights,1068
-96,376,Sanitation,1147
-97,194,Lights,555
-98,157,Food,728
-99,102,Decor,736
-100,641,Catering,419
-101,28,Lights,1773
-102,841,Food,236
-103,605,Catering,1616
-104,591,Food,1897
-105,815,Decor,1294
-106,539,Lights,1257
-107,924,Lights,1186
-108,348,Sanitation,372
-109,244,Decor,1206
-110,829,Decor,839
-111,660,Sanitation,1500
-112,746,Catering,1182
-113,104,Sanitation,514
-114,723,Sound,204
-115,186,Sanitation,829
-116,444,Lights,270
-117,364,Decor,235
-118,691,Catering,1409
-119,376,Food,1484
-120,830,Lights,663
-121,467,Sanitation,76
-122,901,Catering,1357
-123,977,Decor,1181
-124,211,Sound,1086
-125,192,Lights,1873
-126,902,Food,1956
-127,790,Catering,1757
-128,966,Sound,1505
-129,675,Sanitation,955
-130,568,Sanitation,1585
-131,814,Sanitation,1482
-132,194,Sanitation,200
-133,126,Food,832
-134,908,Catering,1782
-135,169,Sanitation,1256
-136,403,Sound,361
-137,202,Sanitation,411
-138,574,Food,168
-139,220,Decor,533
-140,290,Catering,1173
-141,254,Sound,1053
-142,210,Sound,360
-143,580,Sanitation,946
-144,438,Sound,1432
-145,534,Catering,1472
-146,378,Decor,245
-147,17,Food,1171
-148,457,Food,836
-149,829,Catering,1497
-150,907,Catering,657
-151,191,Lights,514
-152,743,Catering,92
-153,596,Sound,1257
-154,644,Decor,911
-155,959,Sound,186
-156,284,Lights,134
-157,805,Decor,1503
-158,413,Lights,1628
-159,255,Decor,1540
-160,715,Decor,866
-161,30,Catering,537
-162,431,Sound,615
-163,344,Lights,1203
-164,879,Lights,1492
-165,62,Decor,665
-166,251,Food,647
-167,268,Sanitation,1542
-168,27,Catering,353
-169,967,Lights,1085
-170,450,Decor,1774
-171,540,Lights,301
-172,438,Lights,612
-173,835,Sound,1385
-174,417,Decor,1086
-175,526,Sound,984
-176,614,Food,1753
-177,886,Decor,839
-178,10,Food,495
-179,27,Lights,1318
-180,440,Sanitation,621
-181,408,Sound,225
-182,502,Food,1905
-183,927,Sound,1090
-184,427,Decor,676
-185,262,Sound,183
-186,877,Sound,1824
-187,424,Lights,257
-188,987,Lights,486
-189,709,Sanitation,122
-190,681,Sound,376
-191,1,Food,385
-192,227,Lights,1606
-193,318,Catering,824
-194,170,Sanitation,992
-195,638,Decor,1314
-196,184,Sound,134
-197,466,Catering,942
-198,878,Lights,751
-199,773,Sound,1357
-200,143,Sanitation,522
+ServiceID,BundleID,VendorID,ServiceName,Price,Description
+1,,54,Lights,1835,"Person outside car injured in collision w van nontraf, init"
+2,,271,Decor,1423,"Neuroma of amputation stump, left upper extremity"
+3,,654,Food,1539,"Pnctr w foreign body of finger w/o damage to nail, init"
+4,,997,Decor,1925,"Contusion of left ankle, sequela"
+5,,228,Lights,957,"Dislocation of unsp interphaln joint of unsp finger, sequela"
+6,,401,Sanitation,1109,"Laceration of blood vessel of right ring finger, subs encntr"
+7,,475,Decor,1013,"Hypothermia following anesthesia, sequela"
+8,,604,Sanitation,1044,"Twin liveborn infant, born in hospital"
+9,,944,Catering,1977,"Oth foreign body or object entering through skin, subs"
+10,,992,Catering,1959,"Poisn by selective seroton/norepineph reup inhibtr, assault"
+11,184,582,Sanitation,308,Contusion of left elbow
+12,,60,Food,1596,"Disp fx of medial condyle of left humerus, sequela"
+13,,212,Food,1427,"Unsp injury of musc/fasc/tend triceps, left arm, subs"
+14,146,920,Sound,907,Other incomplete lesion at C6 level of cervical spinal cord
+15,,925,Catering,1403,"Osteolysis, unspecified shoulder"
+16,190,140,Sanitation,104,"Prsnl hx of malig neoplm of lymphoid, hematpoetc & rel tiss"
+17,,542,Sound,1376,"Spontaneous rupture of other tendons, left ankle and foot"
+18,,986,Food,823,Strain of unspecified Achilles tendon
+19,,54,Sanitation,151,"Disp fx of low epiphy (separation) of l femr, 7thF"
+20,,658,Sound,1416,Unspecified complication of lung transplant
+21,190,291,Sound,1613,"Adverse effect of drugs affecting uric acid metab, sequela"
+22,,174,Lights,686,"Lacerat unsp musc/fasc/tend at thi lev, right thigh, sequela"
+23,,193,Decor,795,Mech compl of oth cardiac and vascular devices and implants
+24,132,233,Decor,1927,"Arthritis due to other bacteria, shoulder"
+25,,469,Sound,121,"Insect bite (nonvenomous) of r frnt wl of thorax, init"
+26,,110,Lights,1600,"Poisoning by thyroid hormones and sub, accidental, sequela"
+27,80,768,Sound,1167,"Adverse effect of cannabis (derivatives), sequela"
+28,198,804,Food,1863,"Other physeal fracture of phalanx of unspecified toe, 7thB"
+29,4,412,Sanitation,1960,"Corrosion of unsp deg mult sites of unsp wrs/hnd, init"
+30,,69,Catering,728,"Drown due to oth accident to oth powered watercraft, subs"
+31,7,107,Lights,951,Struck by ice hockey stick
+32,,756,Sanitation,1001,Aftercare following sterilization reversal
+33,,401,Sanitation,1769,"Unsp opn wnd abd wall, epigst rgn w/o penet perit cav, sqla"
+34,,137,Sound,381,"Rheumatoid arthritis without rheumatoid factor, right wrist"
+35,100,611,Catering,1504,"Major laceration of left internal jugular vein, init encntr"
+36,72,795,Lights,1261,"Unspecified purulent endophthalmitis, bilateral"
+37,,971,Sanitation,1769,"Path fx in oth dis, left radius, subs for fx w routn heal"
+38,,505,Food,580,"Other chronic osteomyelitis, left shoulder"
+39,,958,Decor,753,Rheumatoid polyneuropathy w rheumatoid arthritis of ank/ft
+40,,793,Food,963,Burn of first degree of unspecified axilla
+41,,369,Catering,73,"Vitamin A deficiency, unspecified"
+42,,880,Sanitation,1333,"Poisoning by oth nonopio analges/antipyret, NEC, acc, init"
+43,15,411,Decor,367,"Pathological fracture, right ulna, subs for fx w delay heal"
+44,,815,Catering,1398,"Traum subdr hem w/o loss of consciousness, subs"
+45,39,904,Food,482,"Foreign body granuloma of soft tissue, NEC, thigh"
+46,,263,Catering,745,"Nondisp apophyseal fx unsp femr, subs for clos fx w nonunion"
+47,,709,Decor,303,"Puncture wound with foreign body, left hip"
+48,101,766,Decor,1700,"War operations involving rubber bullets, milt, subs"
+49,,574,Lights,939,"Premature ROM, onset labor more than 24 hours fol rupture"
+50,,240,Sanitation,1040,"Infections of bladder in pregnancy, second trimester"
+51,159,799,Lights,211,"Unsp inj unsp musc/tend at lower leg level, unsp leg, init"
+52,158,654,Sound,1690,"Open bite, right lower leg, initial encounter"
+53,1,632,Decor,277,"Balanced rearrangements and structural markers, NEC"
+54,172,532,Sanitation,871,Other neurologic disorders in Lyme disease
+55,,376,Lights,1860,Corrosions involving 60-69% of body surface
+56,184,548,Sanitation,1856,Longitudinal fracture of patella
+57,2,735,Sound,1128,"Driver of 3-whl mv inj in clsn w 2/3-whl mv in traf, subs"
+58,,727,Sanitation,642,"Oth fx fourth MC bone, right hand, subs for fx w delay heal"
+59,,702,Sound,1435,"Displ transverse fx shaft of unsp tibia, 7thE"
+60,,853,Food,1973,"Hemiplegia, unspecified affecting unspecified side"
+61,83,683,Food,814,"Occup of 3-whl mv inj pick-up truck, pk-up/van in traf, init"
+62,,483,Food,336,Unequal limb length (acquired)
+63,,704,Catering,481,"Minor lacerat femoral vein at hip and thigh level, right leg"
+64,,597,Sanitation,1067,"Person outside car injured pick-up truck, pk-up/van in traf"
+65,,872,Lights,1951,"Contact with running hot water, initial encounter"
+66,64,171,Decor,655,"Epileptic seiz rel to extrn causes, not ntrct, w/o stat epi"
+67,,371,Catering,1676,Corrosion of unspecified degree of unspecified lower leg
+68,,106,Sound,853,"Contact with sharp glass, subsequent encounter"
+69,,174,Catering,887,"Staphylococcal arthritis, right hand"
+70,,90,Lights,1524,Calculus of bile duct with cholecystitis
+71,,153,Food,238,"Disp fx of low epiphy (separation) of unsp femr, 7thJ"
+72,,423,Decor,740,Corrosion of first degree of toe(s) (nail)
+73,,461,Food,231,"Priapism, unspecified"
+74,,187,Decor,496,"Strain long flexor musc/fasc/tend l thm at wrs/hnd lv, init"
+75,161,712,Decor,1630,"Oth fx upr end l tibia, subs for opn fx type I/2 w malunion"
+76,91,736,Sanitation,120,"Poisoning by unspecified topical agent, assault, init encntr"
+77,,94,Food,884,"Superficial foreign body of right thumb, sequela"
+78,,780,Decor,59,"Disp fx of intermed cuneiform of unsp ft, 7thP"
+79,143,436,Decor,1124,"Disp fx of r tibial tuberosity, 7thJ"
+80,,27,Sound,1702,Breakdown (mechanical) of permanent sutures
+81,,192,Sound,1480,"Pressure ulcer of right buttock, stage 4"
+82,,326,Sound,202,"Infective myositis, unspecified right arm"
+83,152,852,Sound,1455,"Pnctr w fb of pharynx and cervical esophagus, sequela"
+84,,195,Decor,1207,"Subluxation of MCP joint of right index finger, subs"
+85,122,682,Decor,1516,Lacerat intrinsic musc/fasc/tend l idx fngr at wrs/hnd lv
+86,,858,Sound,1836,"Juvenile arthritis, unspecified, hip"
+87,,437,Catering,1729,"Type 3 fracture of sacrum, init encntr for open fracture"
+88,134,757,Lights,597,Striking against wall of swimming pool causing other injury
+89,3,465,Lights,922,Unsp personality & behavrl disord due to known physiol cond
+90,147,920,Sanitation,621,"Puncture wound w/o foreign body of right buttock, sequela"
+91,,394,Lights,1900,"Unsp fracture of upper end of left humerus, init for opn fx"
+92,127,387,Sound,1354,"Nondisp simp suprcndl fx w/o intrcndl fx unsp humer, 7thD"
+93,,122,Catering,1570,"Poisoning by oth hormones and synthetic sub, self-harm"
+94,112,282,Sound,1935,Dislocation of right ankle joint
+95,,176,Catering,177,"Pasngr in pk-up/van inj in clsn w 2/3-whl mv nontraf, init"
+96,128,591,Sound,1585,"Unspecified injury of right renal vein, initial encounter"
+97,,423,Catering,1540,"Infct of amniotic sac and membrns, unsp, unsp tri, fetus 1"
+98,43,890,Sound,1159,"Occup of 3-whl mv injured pick-up truck, pk-up/van in traf"
+99,162,777,Food,1509,"Strain intrns musc/fasc/tend r rng fngr at wrs/hnd lv, sqla"
+100,7,185,Catering,807,External constriction of toe
+101,167,27,Lights,1275,"Allergic dermatitis of right eye, unspecified eyelid"
+102,,275,Sanitation,1281,"Unsp injury of posterior tibial artery, right leg, sequela"
+103,70,118,Sanitation,1138,Laceration of extensor musc/fasc/tend thmb at wrs/hnd lv
+104,153,329,Lights,1204,Carcinoma in situ of other female genital organs
+105,,465,Sanitation,491,"Bent bone of right ulna, subs for clos fx w malunion"
+106,,194,Decor,1059,"Disp fx of lateral condyle of right humerus, init for opn fx"
+107,,74,Lights,718,Other mastoiditis and related conditions
+108,191,246,Decor,1355,"Other specified arthritis, hip"
+109,1,909,Sanitation,233,Rheumatoid arthritis of hip w involv of organs and systems
+110,176,255,Food,318,"Superficial foreign body, right lower leg, initial encounter"
+111,,737,Food,1086,"Nondisp oblique fx shaft of unsp fibula, 7thQ"
+112,,390,Sound,835,"Fx unsp part of nk of r femr, subs for clos fx w delay heal"
+113,87,207,Sound,1675,Conjunctival granuloma
+114,,599,Catering,1386,Other disorders of amniotic fluid and membranes
+115,,266,Sound,1591,"Nondisp commnt fx shaft of ulna, l arm, 7thJ"
+116,107,747,Sanitation,661,Injury of renal blood vessels
+117,67,313,Sound,545,"Toxic effect of nitrodrv/aminodrv of benzn/homolog, slf-hrm"
+118,,657,Sanitation,1673,"Ped on sktbrd inj in clsn w nonmtr vehicle in traf, sequela"
+119,,931,Lights,419,"Unsp inj msl/tnd lng extn msl toe at ank/ft lev, r ft, sqla"
+120,,88,Sanitation,1953,"Nondisp fx of prox phalanx of l thm, subs for fx w nonunion"
+121,11,873,Sound,226,"Burn of unsp deg mult left fingers (nail), inc thumb, init"
+122,9,162,Decor,1554,Lobular carcinoma in situ of unspecified breast
+123,45,588,Decor,1089,"Lacerat abd wall w fb, l upr q w/o penet perit cav, subs"
+124,,91,Sanitation,1387,"Nondisp segmental fracture of shaft of humerus, unsp arm"
+125,,19,Catering,1508,"Hydroxyapatite deposition disease, left knee"
+126,100,41,Sound,670,"Stress fracture, unsp ankle, subs for fx w nonunion"
+127,,155,Sanitation,1521,"Contus/lac/hem brainstem w LOC of 1-5 hrs 59 min, sequela"
+128,,501,Decor,502,Intracranial and intraspinal phlebitis and thrombophlebitis
+129,112,413,Sound,1405,"4-part fx surgical neck of unsp humerus, init for opn fx"
+130,,921,Catering,1843,"Unsp fx upr end unsp rad, 7thQ"
+131,68,317,Catering,255,"Condctv hear loss, uni, right ear, w unrestr hear cntra side"
+132,176,375,Lights,1795,"Unsp injury of unsp blood vessel at shldr/up arm, left arm"
+133,,719,Catering,854,"Fracture of alveolus of maxilla, subs for fx w nonunion"
+134,87,831,Lights,1146,"Nondisp fx of base of nk of r femr, 7thE"
+135,,507,Sanitation,1212,Laparoscopic surgical procedure converted to open procedure
+136,150,849,Catering,1886,Gammaherpesviral mononucleosis with other complications
+137,111,645,Sanitation,193,"Injury of radial nerve at upper arm level, unsp arm, sequela"
+138,,580,Sound,1901,Causalgia of right lower limb
+139,158,160,Sanitation,361,"Spondylolysis, site unspecified"
+140,,263,Sound,664,"Unsp injury of blood vessels at lower leg level, unsp leg"
+141,,518,Decor,809,"Disp fx of fourth metatarsal bone, unspecified foot, sequela"
+142,,272,Catering,98,"Toxic effect of carb monx from mtr veh exhaust, asslt, sqla"
+143,182,664,Decor,1345,"Displ spiral fx shaft of r femr, 7thD"
+144,,511,Lights,1282,"Displ spiral fx shaft of unsp tibia, 7thN"
+145,,360,Food,172,Pedestrian injured in collision w rail trn/veh in traf
+146,55,380,Sound,355,"Achilles tendinitis, right leg"
+147,,32,Sound,1604,"Pedl cyc pasngr inj in clsn w nonmtr vehicle in traf, sqla"
+148,23,995,Lights,327,"Unsp mtrcy rider injured in clsn w unsp mv in traf, subs"
+149,,962,Catering,707,"Fracture of orbital floor, left side, 7thD"
+150,125,264,Lights,1094,"Traum subrac hem w LOC w death d/t brain inj bf consc, subs"
+151,21,926,Sound,1291,"Laceration of posterior tibial artery, right leg, sequela"
+152,167,561,Decor,1750,"Unsp opn wnd right lesser toe(s) w/o damage to nail, subs"
+153,,870,Decor,135,"Subluxation of MCP joint of left ring finger, sequela"
+154,,679,Food,1966,Sepsis following complete or unsp spontaneous abortion
+155,9,776,Decor,1858,Incomplete defecation
+156,39,456,Food,1923,Contact with and (suspected) exposure to uranium
+157,82,571,Food,1143,"Arthritis due to other bacteria, left wrist"
+158,31,453,Food,1277,"Displ bimalleol fx unsp low leg, 7thJ"
+159,139,7,Food,1175,Idiopathic aseptic necrosis of right finger(s)
+160,,652,Decor,1028,"Conjunctival adhesions and strands (localized), unsp eye"
+161,,765,Sound,1793,Rheumatoid vasculitis w rheumatoid arthritis of left ank/ft
+162,98,16,Food,471,"Drug-induced cataract, bilateral"
+163,,37,Food,138,Complete traumatic amputation of unspecified breast
+164,179,720,Sanitation,435,"Inj oth blood vessels at ank/ft level, right leg, init"
+165,,645,Sanitation,1837,"Toxic effect of venom of arthropod, self-harm, sequela"
+166,,90,Sound,1397,Nondisplaced transverse fracture of shaft of right tibia
+167,,280,Decor,310,"Nondisp fx of med condyle of r tibia, 7thN"
+168,,476,Sound,1823,"Dislocation of carpometacarpal joint of unsp hand, sequela"
+169,192,587,Sanitation,203,"Laceration with foreign body, unspecified hip, sequela"
+170,,455,Sanitation,1307,"Contusion of adrenal gland, initial encounter"
+171,60,359,Food,1777,Inj extensor musc/fasc/tend and unsp finger at forarm lv
+172,125,692,Lights,1946,"Disp fx of greater tuberosity of right humerus, sequela"
+173,114,527,Food,1949,"Labor and del comp by oth cord entangle, w/o comprsn, fts5"
+174,46,252,Catering,693,"Laceration w/o fb of right cheek and TMJ area, init"
+175,,596,Sanitation,261,Juvenile osteochondrosis of head of femur
+176,93,685,Decor,186,"Stress fracture, left tibia, sequela"
+177,99,69,Sound,412,"Oth types of non-Hodgkin lymphoma, lymph nodes mult site"
+178,,90,Food,148,"Glaucoma secondary to drugs, right eye, indeterminate stage"
+179,163,630,Sound,135,"Torus fx lower end of l humerus, subs for fx w nonunion"
+180,,361,Decor,1509,Non-pressure chronic ulcer of left ankle
+181,95,610,Catering,1380,"External constriction of left hand, subsequent encounter"
+182,123,758,Sanitation,628,Chronic embolism and thrombosis of r int jugular vein
+183,122,335,Catering,749,Occup of 3-whl mv injured in clsn w nonmtr vehicle in traf
+184,,104,Decor,1684,Burn of 3rd deg mu sites of unsp wrist and hand
+185,,568,Catering,1965,"Unsp physeal fracture of upper end of unsp femur, init"
+186,,141,Food,1614,"Unsp soft tissue disord related to use/pressure, unsp shldr"
+187,,780,Decor,707,Fall on board other unpowered watercraft
+188,186,59,Food,602,Varicose veins of right lower extremity with ulcer of thigh
+189,,2,Lights,654,"Other stimulant use, unsp with intoxication, uncomplicated"
+190,,798,Sanitation,1013,Pressure ulcer of other site
+191,115,82,Lights,1199,"Nondisp fx of dist phalanx of r less toe(s), init for opn fx"
+192,,834,Sound,1274,"Nondisp transcondy fracture of r humerus, init for opn fx"
+193,,550,Decor,1795,"Oth nondisp fx of third cervical vertebra, init for clos fx"
+194,,168,Food,156,"Poisoning by unsp systemic antibiotic, undetermined, subs"
+195,195,917,Decor,989,"Crushing injury of right great toe, initial encounter"
+196,,355,Catering,575,"Colles' fracture of left radius, init for opn fx type 3A/B/C"
+197,,240,Sanitation,1097,"Contusion of right thigh, initial encounter"
+198,,863,Lights,1263,"Toxic effect of carbon dioxide, accidental, subs"
+199,188,325,Food,1376,"Laceration of peroneal artery, left leg, subs encntr"
+200,62,279,Decor,1712,"Toxic effect of ingested mushrooms, assault"
