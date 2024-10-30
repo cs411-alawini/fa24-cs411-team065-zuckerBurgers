@@ -1,0 +1,1001 @@
+ServiceID,VendorID,ServiceName,Price
+1,749,Lights,Dirham
+2,128,Catering,Koruna
+3,428,Sanitation,Denar
+4,997,Lights,Peso
+5,124,Miscellaneous,Dollar
+6,339,Sound,Rupiah
+7,192,Cleaning,Rupiah
+8,935,Snacks,Dong
+9,405,Cleaning,Dollar
+10,785,Cleaning,Naira
+11,398,Cleaning,Zloty
+12,258,Miscellaneous,Real
+13,141,Catering,Zloty
+14,512,Sanitation,Ruble
+15,161,Miscellaneous,Rupiah
+16,587,Snacks,Yuan Renminbi
+17,394,Snacks,Naira
+18,938,Catering,Ruble
+19,456,Catering,Yuan Renminbi
+20,482,Cleaning,Yuan Renminbi
+21,108,Sound,Peso
+22,98,Sound,Dollar
+23,606,Sanitation,Pula
+24,655,Catering,Krone
+25,948,Cleaning,Lilangeni
+26,192,Catering,Yuan Renminbi
+27,437,Miscellaneous,Peso
+28,442,Sanitation,Tugrik
+29,573,Catering,Euro
+30,851,Snacks,Rand
+31,428,Lights,Yuan Renminbi
+32,470,Snacks,Peso
+33,360,Lights,Hryvnia
+34,653,Miscellaneous,Rupiah
+35,74,Cleaning,Yuan Renminbi
+36,582,Sanitation,Krona
+37,616,Sound,Peso
+38,242,Sound,Peso
+39,95,Sanitation,Yuan Renminbi
+40,249,Snacks,Hryvnia
+41,445,Cleaning,Peso
+42,188,Miscellaneous,Rupiah
+43,792,Cleaning,Yuan Renminbi
+44,468,Cleaning,Rupiah
+45,468,Sound,Dinar
+46,452,Sanitation,Yuan Renminbi
+47,863,Catering,Som
+48,110,Miscellaneous,Ruble
+49,510,Lights,Dollar
+50,377,Cleaning,Shilling
+51,611,Sound,Baht
+52,259,Snacks,Zloty
+53,877,Lights,Hryvnia
+54,984,Cleaning,Rupiah
+55,166,Snacks,Ruble
+56,697,Sound,Rupiah
+57,117,Snacks,Peso
+58,618,Sound,Ruble
+59,721,Cleaning,Kyat
+60,98,Cleaning,Cedi
+61,405,Catering,Yuan Renminbi
+62,444,Catering,Rupiah
+63,967,Sound,Rupee
+64,59,Snacks,Dollar
+65,601,Catering,Kyat
+66,815,Catering,Rupiah
+67,3,Sound,Euro
+68,795,Lights,Ariary
+69,17,Miscellaneous,Ruble
+70,27,Sound,Yuan Renminbi
+71,628,Catering,Rufiyaa
+72,399,Snacks,Lek
+73,532,Sanitation,Ruble
+74,558,Snacks,Zloty
+75,691,Sound,Dinar
+76,281,Lights,Peso
+77,122,Lights,Dong
+78,402,Sanitation,Rupiah
+79,633,Sound,Euro
+80,603,Miscellaneous,Peso
+81,231,Cleaning,Kwacha
+82,388,Snacks,Real
+83,251,Snacks,Shekel
+84,590,Catering,Peso
+85,971,Sanitation,Dinar
+86,705,Snacks,Rupiah
+87,121,Sanitation,Euro
+88,23,Miscellaneous,Kina
+89,699,Catering,Yuan Renminbi
+90,622,Catering,Tugrik
+91,768,Cleaning,Yuan Renminbi
+92,424,Sound,Yuan Renminbi
+93,203,Catering,Yen
+94,590,Cleaning,Rupiah
+95,173,Snacks,Ringgit
+96,969,Snacks,Dollar
+97,680,Miscellaneous,Hryvnia
+98,237,Lights,Rupiah
+99,147,Snacks,Dinar
+100,738,Miscellaneous,Euro
+101,640,Cleaning,Franc
+102,177,Sanitation,Rupiah
+103,930,Miscellaneous,Euro
+104,873,Catering,Euro
+105,299,Catering,Sol
+106,660,Lights,Real
+107,570,Sanitation,Marka
+108,713,Cleaning,Peso
+109,656,Lights,Kwanza
+110,72,Catering,Dinar
+111,264,Sanitation,Yuan Renminbi
+112,735,Miscellaneous,Euro
+113,256,Cleaning,Yuan Renminbi
+114,335,Snacks,Lempira
+115,257,Miscellaneous,Zloty
+116,809,Cleaning,Rupiah
+117,725,Cleaning,Rupiah
+118,17,Lights,Rupiah
+119,520,Miscellaneous,Rupiah
+120,980,Cleaning,Euro
+121,912,Cleaning,Yuan Renminbi
+122,558,Miscellaneous,Zloty
+123,170,Sanitation,Rupiah
+124,428,Sound,Franc
+125,190,Cleaning,Rupiah
+126,370,Snacks,Euro
+127,440,Cleaning,Rand
+128,123,Sanitation,Dollar
+129,530,Sound,Euro
+130,405,Sanitation,Euro
+131,888,Miscellaneous,Shekel
+132,955,Sound,Peso
+133,787,Lights,Pound
+134,996,Sanitation,Euro
+135,88,Sound,Ruble
+136,348,Lights,Yen
+137,337,Snacks,Yuan Renminbi
+138,195,Lights,Rand
+139,948,Lights,Euro
+140,603,Catering,Yuan Renminbi
+141,5,Cleaning,Naira
+142,802,Sanitation,Euro
+143,681,Catering,Zloty
+144,739,Miscellaneous,Dirham
+145,954,Lights,Yuan Renminbi
+146,420,Sanitation,Peso
+147,471,Catering,Peso
+148,568,Sound,Shilling
+149,975,Snacks,Yuan Renminbi
+150,421,Sanitation,Yuan Renminbi
+151,974,Sound,Real
+152,685,Sanitation,Koruna
+153,797,Sound,Yuan Renminbi
+154,264,Cleaning,Rupiah
+155,532,Cleaning,Tenge
+156,391,Cleaning,Hryvnia
+157,235,Lights,Sol
+158,321,Miscellaneous,Euro
+159,162,Lights,Euro
+160,751,Lights,Yen
+161,26,Catering,Euro
+162,252,Catering,Won
+163,34,Cleaning,Yuan Renminbi
+164,951,Lights,Manat
+165,622,Lights,Won
+166,634,Miscellaneous,Peso
+167,576,Sanitation,Yuan Renminbi
+168,476,Catering,Peso
+169,801,Lights,Rial
+170,604,Sanitation,Ruble
+171,795,Snacks,Koruna
+172,644,Catering,Yuan Renminbi
+173,161,Miscellaneous,Peso
+174,474,Snacks,Euro
+175,806,Sound,Yuan Renminbi
+176,361,Sound,Yuan Renminbi
+177,617,Sanitation,Rial
+178,626,Cleaning,Yuan Renminbi
+179,734,Miscellaneous,Lek
+180,576,Miscellaneous,Yuan Renminbi
+181,835,Cleaning,Euro
+182,492,Miscellaneous,Real
+183,272,Snacks,Pula
+184,859,Catering,Yuan Renminbi
+185,527,Cleaning,Zloty
+186,535,Lights,Peso
+187,557,Sanitation,Yen
+188,134,Sanitation,Real
+189,624,Sound,Peso
+190,404,Miscellaneous,Yuan Renminbi
+191,512,Sound,Yuan Renminbi
+192,501,Catering,Hryvnia
+193,647,Miscellaneous,Rupiah
+194,514,Cleaning,Zloty
+195,278,Cleaning,Peso
+196,976,Sanitation,Euro
+197,65,Snacks,Hryvnia
+198,624,Snacks,Kwanza
+199,307,Sanitation,Yuan Renminbi
+200,424,Miscellaneous,Euro
+201,706,Sanitation,Peso
+202,979,Miscellaneous,Real
+203,886,Catering,Peso
+204,822,Snacks,Colon
+205,212,Catering,Euro
+206,887,Miscellaneous,Yen
+207,70,Lights,Peso
+208,896,Sound,Rupiah
+209,150,Miscellaneous,Yuan Renminbi
+210,916,Sound,Yuan Renminbi
+211,847,Catering,Gourde
+212,530,Miscellaneous,Yuan Renminbi
+213,248,Lights,Kuna
+214,976,Lights,Ruble
+215,425,Lights,Euro
+216,524,Cleaning,Real
+217,5,Catering,Shilling
+218,522,Sanitation,Peso
+219,188,Sanitation,Balboa
+220,410,Catering,Ruble
+221,844,Sound,Yuan Renminbi
+222,379,Cleaning,Koruna
+223,471,Lights,Peso
+224,985,Miscellaneous,Yuan Renminbi
+225,654,Snacks,Yuan Renminbi
+226,742,Snacks,Baht
+227,304,Catering,Ruble
+228,679,Sound,Yuan Renminbi
+229,668,Lights,Yuan Renminbi
+230,299,Miscellaneous,Franc
+231,512,Sound,Real
+232,202,Miscellaneous,Krona
+233,183,Snacks,Euro
+234,244,Sound,Ruble
+235,836,Sanitation,Hryvnia
+236,790,Sanitation,Euro
+237,908,Cleaning,Rial
+238,784,Sound,Rupiah
+239,876,Sound,Rupiah
+240,396,Sanitation,Rupiah
+241,884,Catering,Dollar
+242,654,Catering,Euro
+243,766,Snacks,Euro
+244,363,Sanitation,Yuan Renminbi
+245,486,Sound,Real
+246,903,Miscellaneous,Yuan Renminbi
+247,483,Snacks,Yuan Renminbi
+248,153,Miscellaneous,Peso
+249,399,Catering,Rupiah
+250,104,Cleaning,Dong
+251,909,Miscellaneous,Peso
+252,574,Catering,Peso
+253,466,Sanitation,Ruble
+254,134,Lights,Ruble
+255,820,Sound,Rupiah
+256,233,Lights,Zloty
+257,322,Sanitation,Yuan Renminbi
+258,251,Sound,Rand
+259,463,Snacks,Peso
+260,779,Cleaning,Lempira
+261,503,Catering,Yuan Renminbi
+262,1,Sanitation,Rupiah
+263,966,Cleaning,Euro
+264,433,Sound,Rupiah
+265,823,Lights,Yuan Renminbi
+266,561,Lights,Dollar
+267,475,Miscellaneous,Krona
+268,480,Miscellaneous,Sol
+269,714,Miscellaneous,Yuan Renminbi
+270,393,Sanitation,Peso
+271,473,Sound,Euro
+272,516,Cleaning,Bolivar
+273,413,Sanitation,Yuan Renminbi
+274,681,Snacks,Afghani
+275,972,Miscellaneous,Peso
+276,234,Sanitation,Lempira
+277,507,Sanitation,Ruble
+278,215,Cleaning,Yuan Renminbi
+279,775,Snacks,Ruble
+280,287,Sound,Ruble
+281,447,Sound,Zloty
+282,729,Lights,Euro
+283,136,Snacks,Shilling
+284,967,Miscellaneous,Yuan Renminbi
+285,449,Cleaning,Rupiah
+286,94,Snacks,Yuan Renminbi
+287,12,Snacks,Tenge
+288,894,Miscellaneous,Ruble
+289,286,Snacks,Yuan Renminbi
+290,719,Miscellaneous,Tugrik
+291,455,Lights,Baht
+292,705,Miscellaneous,Peso
+293,734,Sanitation,Litas
+294,709,Catering,Dollar
+295,993,Snacks,Peso
+296,134,Sanitation,Euro
+297,21,Sound,Yuan Renminbi
+298,376,Snacks,Krona
+299,474,Cleaning,Peso
+300,197,Sound,Yuan Renminbi
+301,398,Sound,Peso
+302,901,Snacks,Kyat
+303,245,Catering,Rupiah
+304,799,Snacks,Dollar
+305,115,Snacks,Yuan Renminbi
+306,239,Cleaning,Shilling
+307,4,Miscellaneous,Yuan Renminbi
+308,690,Miscellaneous,Pound
+309,647,Cleaning,Franc
+310,913,Snacks,Rupiah
+311,543,Sound,Dollar
+312,54,Catering,Peso
+313,821,Sound,Dollar
+314,351,Miscellaneous,Dollar
+315,238,Miscellaneous,Krona
+316,241,Sound,Krona
+317,521,Miscellaneous,Dram
+318,408,Cleaning,Dollar
+319,292,Sound,Euro
+320,43,Cleaning,Euro
+321,74,Catering,Yuan Renminbi
+322,482,Lights,Euro
+323,487,Cleaning,Yuan Renminbi
+324,333,Sound,Ruble
+325,848,Lights,Yuan Renminbi
+326,550,Catering,Peso
+327,630,Sound,Zloty
+328,324,Cleaning,Yuan Renminbi
+329,171,Sanitation,Yuan Renminbi
+330,958,Lights,Yuan Renminbi
+331,199,Catering,Koruna
+332,347,Snacks,Cordoba
+333,86,Lights,Real
+334,745,Sanitation,Guarani
+335,62,Sound,Yuan Renminbi
+336,761,Sound,Dong
+337,808,Cleaning,Rupiah
+338,944,Lights,Yuan Renminbi
+339,27,Cleaning,Kwacha
+340,227,Lights,Dong
+341,52,Sanitation,Euro
+342,25,Miscellaneous,Ruble
+343,634,Cleaning,Ruble
+344,440,Catering,Lempira
+345,892,Catering,Zloty
+346,372,Sound,Peso
+347,351,Sanitation,Zloty
+348,992,Cleaning,Krona
+349,680,Cleaning,Euro
+350,958,Sanitation,Yuan Renminbi
+351,222,Cleaning,Yuan Renminbi
+352,189,Miscellaneous,Hryvnia
+353,240,Sound,Yen
+354,127,Miscellaneous,Koruna
+355,608,Sanitation,Franc
+356,534,Lights,Yuan Renminbi
+357,777,Snacks,Euro
+358,952,Cleaning,Krona
+359,43,Snacks,Real
+360,159,Miscellaneous,Peso
+361,401,Sound,Yuan Renminbi
+362,509,Lights,Krona
+363,622,Catering,Dram
+364,545,Catering,Baht
+365,710,Lights,Yuan Renminbi
+366,927,Sanitation,Rupiah
+367,378,Lights,Euro
+368,513,Cleaning,Yuan Renminbi
+369,607,Miscellaneous,Rupee
+370,939,Sound,Real
+371,761,Cleaning,Manat
+372,991,Cleaning,Pound
+373,587,Catering,Dinar
+374,262,Catering,Yuan Renminbi
+375,826,Cleaning,Zloty
+376,978,Lights,Zloty
+377,969,Snacks,Zloty
+378,365,Cleaning,Peso
+379,903,Miscellaneous,Yuan Renminbi
+380,833,Snacks,Franc
+381,341,Catering,Peso
+382,992,Cleaning,Quetzal
+383,675,Sound,Euro
+384,421,Sanitation,Dollar
+385,450,Miscellaneous,Koruna
+386,352,Cleaning,Rupiah
+387,208,Catering,Kyat
+388,427,Cleaning,Yuan Renminbi
+389,106,Cleaning,Yuan Renminbi
+390,52,Sound,Euro
+391,120,Sound,Rupee
+392,538,Sanitation,Sol
+393,588,Lights,Rupee
+394,433,Sanitation,Franc
+395,481,Sanitation,Guarani
+396,21,Catering,Euro
+397,685,Catering,Euro
+398,58,Miscellaneous,Yuan Renminbi
+399,847,Cleaning,Euro
+400,25,Cleaning,Peso
+401,534,Lights,Yen
+402,337,Sound,Yuan Renminbi
+403,746,Catering,Kwacha
+404,602,Catering,Peso
+405,116,Lights,Yuan Renminbi
+406,20,Miscellaneous,Nakfa
+407,907,Sanitation,Yuan Renminbi
+408,165,Snacks,Zloty
+409,116,Snacks,Euro
+410,650,Cleaning,Rupiah
+411,769,Cleaning,Peso
+412,401,Sound,Rupiah
+413,33,Lights,Rupiah
+414,230,Catering,Euro
+415,771,Sound,Real
+416,568,Catering,Euro
+417,735,Miscellaneous,Rial
+418,918,Sanitation,Yuan Renminbi
+419,810,Sound,Peso
+420,467,Sound,Shekel
+421,961,Cleaning,Shilling
+422,125,Sanitation,Ruble
+423,375,Miscellaneous,Yuan Renminbi
+424,128,Sanitation,Zloty
+425,114,Sound,Yuan Renminbi
+426,304,Miscellaneous,Real
+427,190,Sanitation,Ringgit
+428,732,Sanitation,Dirham
+429,890,Snacks,Zloty
+430,131,Catering,Real
+431,971,Miscellaneous,Rupiah
+432,991,Lights,Rial
+433,27,Catering,Sol
+434,449,Cleaning,Yuan Renminbi
+435,867,Sanitation,Yuan Renminbi
+436,873,Catering,Yen
+437,488,Snacks,Yuan Renminbi
+438,136,Cleaning,Rupiah
+439,429,Lights,Zloty
+440,690,Sound,Yuan Renminbi
+441,782,Miscellaneous,Peso
+442,727,Sound,Colon
+443,107,Catering,Peso
+444,583,Snacks,Sol
+445,253,Sound,Yuan Renminbi
+446,144,Sound,Rupiah
+447,248,Miscellaneous,Afghani
+448,791,Snacks,Peso
+449,850,Lights,Ringgit
+450,122,Cleaning,Dollar
+451,920,Lights,Yuan Renminbi
+452,368,Cleaning,Hryvnia
+453,168,Lights,Euro
+454,20,Catering,Zloty
+455,548,Lights,Euro
+456,145,Cleaning,Manat
+457,642,Sound,Hryvnia
+458,652,Miscellaneous,Yuan Renminbi
+459,723,Snacks,Kina
+460,389,Cleaning,Peso
+461,372,Catering,Dollar
+462,7,Snacks,Kuna
+463,58,Lights,Yuan Renminbi
+464,729,Cleaning,Cordoba
+465,600,Sanitation,Peso
+466,705,Cleaning,Naira
+467,681,Sanitation,Sol
+468,272,Sound,Rupee
+469,158,Cleaning,Yuan Renminbi
+470,123,Sanitation,Lev
+471,224,Sanitation,Lek
+472,14,Catering,Koruna
+473,510,Snacks,Peso
+474,646,Miscellaneous,Kuna
+475,112,Catering,Cordoba
+476,461,Sound,Yuan Renminbi
+477,50,Sanitation,Yuan Renminbi
+478,172,Miscellaneous,Euro
+479,355,Snacks,Euro
+480,17,Sanitation,Peso
+481,28,Snacks,Peso
+482,673,Miscellaneous,Euro
+483,71,Sanitation,Yuan Renminbi
+484,116,Miscellaneous,Dollar
+485,397,Lights,Ringgit
+486,8,Snacks,Yuan Renminbi
+487,370,Sound,Dollar
+488,144,Cleaning,Peso
+489,707,Lights,Rupiah
+490,651,Sanitation,Zloty
+491,110,Snacks,Rupiah
+492,991,Sanitation,Dollar
+493,697,Catering,Yuan Renminbi
+494,692,Sanitation,Yuan Renminbi
+495,340,Catering,Rupiah
+496,528,Cleaning,Ruble
+497,628,Miscellaneous,Yuan Renminbi
+498,856,Catering,Yen
+499,845,Catering,Birr
+500,451,Cleaning,Kyat
+501,7,Sound,Yuan Renminbi
+502,493,Catering,Ruble
+503,704,Sanitation,Euro
+504,974,Miscellaneous,Hryvnia
+505,54,Lights,Yuan Renminbi
+506,639,Miscellaneous,Peso
+507,165,Snacks,Yuan Renminbi
+508,50,Catering,Yuan Renminbi
+509,432,Catering,Peso
+510,862,Miscellaneous,Peso
+511,800,Cleaning,Euro
+512,952,Catering,Rupiah
+513,594,Miscellaneous,Rupiah
+514,160,Miscellaneous,Lari
+515,556,Cleaning,Dollar
+516,373,Lights,Koruna
+517,513,Sanitation,Shekel
+518,525,Sanitation,Peso
+519,639,Cleaning,Yuan Renminbi
+520,43,Sound,Peso
+521,385,Miscellaneous,Real
+522,909,Snacks,Yen
+523,614,Miscellaneous,Euro
+524,831,Catering,Yuan Renminbi
+525,982,Lights,Yuan Renminbi
+526,267,Sound,Yuan Renminbi
+527,808,Cleaning,Lempira
+528,27,Miscellaneous,Yuan Renminbi
+529,331,Catering,Dollar
+530,393,Catering,Yuan Renminbi
+531,608,Catering,Franc
+532,615,Sound,Ruble
+533,892,Snacks,Peso
+534,638,Snacks,Rupiah
+535,233,Sanitation,Dong
+536,865,Cleaning,Rupiah
+537,988,Cleaning,Tugrik
+538,809,Snacks,Pound
+539,108,Snacks,Real
+540,844,Miscellaneous,Ruble
+541,458,Snacks,Yuan Renminbi
+542,639,Sound,Euro
+543,262,Catering,Ruble
+544,408,Snacks,Yuan Renminbi
+545,593,Sound,Euro
+546,116,Sanitation,Won
+547,509,Snacks,Rupiah
+548,889,Sanitation,Colon
+549,970,Sanitation,Yuan Renminbi
+550,797,Sanitation,Dollar
+551,659,Catering,Lev
+552,77,Snacks,Sol
+553,24,Cleaning,Franc
+554,930,Catering,Euro
+555,442,Snacks,Yuan Renminbi
+556,332,Cleaning,Ruble
+557,523,Snacks,Yuan Renminbi
+558,810,Cleaning,Quetzal
+559,567,Miscellaneous,Shilling
+560,851,Snacks,Denar
+561,117,Catering,Dinar
+562,501,Snacks,Krona
+563,390,Lights,Krona
+564,207,Miscellaneous,Peso
+565,427,Cleaning,Rupiah
+566,690,Catering,Afghani
+567,577,Sound,Ruble
+568,86,Snacks,Lempira
+569,516,Catering,Hryvnia
+570,975,Cleaning,Rupiah
+571,118,Sanitation,Dollar
+572,501,Sanitation,Ruble
+573,95,Miscellaneous,Peso
+574,696,Cleaning,Dollar
+575,564,Cleaning,Euro
+576,995,Sanitation,Yuan Renminbi
+577,36,Sound,Zloty
+578,917,Cleaning,Peso
+579,62,Cleaning,Rupee
+580,458,Sanitation,Manat
+581,645,Sanitation,Baht
+582,883,Catering,Peso
+583,411,Miscellaneous,Euro
+584,671,Cleaning,Koruna
+585,195,Sanitation,Real
+586,255,Catering,Yuan Renminbi
+587,388,Snacks,Afghani
+588,317,Miscellaneous,Euro
+589,815,Miscellaneous,Yuan Renminbi
+590,594,Snacks,Rupiah
+591,889,Snacks,Pound
+592,730,Snacks,Yuan Renminbi
+593,537,Miscellaneous,Baht
+594,276,Miscellaneous,Shekel
+595,785,Cleaning,Rupiah
+596,973,Sanitation,Afghani
+597,133,Snacks,Yuan Renminbi
+598,899,Sanitation,Kwanza
+599,600,Lights,Franc
+600,431,Snacks,Dinar
+601,687,Catering,Yuan Renminbi
+602,205,Cleaning,Ruble
+603,728,Cleaning,Afghani
+604,762,Catering,Franc
+605,803,Lights,Rial
+606,472,Miscellaneous,Dollar
+607,892,Catering,Dram
+608,415,Cleaning,Taka
+609,751,Sanitation,Dollar
+610,929,Cleaning,Euro
+611,157,Cleaning,Peso
+612,659,Sound,Lari
+613,36,Lights,Ruble
+614,767,Snacks,Yuan Renminbi
+615,632,Sound,Ruble
+616,152,Snacks,Euro
+617,491,Catering,Euro
+618,891,Miscellaneous,Tenge
+619,967,Lights,Peso
+620,48,Lights,Krone
+621,293,Sanitation,Euro
+622,375,Sound,Yuan Renminbi
+623,48,Cleaning,Yuan Renminbi
+624,742,Sound,Peso
+625,894,Miscellaneous,Yuan Renminbi
+626,897,Catering,Rupee
+627,496,Miscellaneous,Peso
+628,790,Sanitation,Rupiah
+629,837,Miscellaneous,Krona
+630,310,Catering,Yuan Renminbi
+631,634,Lights,Ruble
+632,56,Miscellaneous,Rial
+633,615,Snacks,Euro
+634,621,Catering,Rupiah
+635,721,Miscellaneous,Rial
+636,519,Snacks,Rupiah
+637,628,Miscellaneous,Yuan Renminbi
+638,288,Lights,Peso
+639,998,Catering,Baht
+640,480,Sanitation,Peso
+641,308,Sanitation,Yuan Renminbi
+642,417,Cleaning,Ruble
+643,918,Snacks,Rupiah
+644,326,Lights,Real
+645,179,Sanitation,Hryvnia
+646,36,Catering,Litas
+647,672,Cleaning,Yuan Renminbi
+648,488,Sound,Peso
+649,304,Lights,Yuan Renminbi
+650,204,Sound,Rupiah
+651,87,Miscellaneous,Euro
+652,568,Snacks,Yuan Renminbi
+653,230,Snacks,Zloty
+654,561,Sound,Euro
+655,547,Lights,Real
+656,739,Sound,Yuan Renminbi
+657,432,Sanitation,Koruna
+658,652,Miscellaneous,Ruble
+659,354,Catering,Euro
+660,394,Snacks,Rupiah
+661,159,Lights,Yuan Renminbi
+662,377,Sanitation,Rupiah
+663,533,Cleaning,Baht
+664,457,Snacks,Krona
+665,275,Snacks,Zloty
+666,392,Miscellaneous,Euro
+667,370,Snacks,Franc
+668,422,Sound,Euro
+669,355,Sanitation,Dollar
+670,297,Catering,Euro
+671,230,Sanitation,Som
+672,780,Lights,Yuan Renminbi
+673,611,Miscellaneous,Lempira
+674,493,Lights,Naira
+675,502,Sound,Euro
+676,129,Miscellaneous,Sol
+677,685,Lights,Dollar
+678,72,Sanitation,Euro
+679,942,Catering,Yuan Renminbi
+680,779,Snacks,Rupiah
+681,600,Miscellaneous,Euro
+682,355,Cleaning,Afghani
+683,498,Miscellaneous,Yuan Renminbi
+684,821,Sound,Dinar
+685,241,Sanitation,Baht
+686,734,Lights,Yuan Renminbi
+687,183,Catering,Krona
+688,631,Sound,Peso
+689,349,Catering,Yuan Renminbi
+690,146,Sanitation,Rupee
+691,32,Lights,Euro
+692,603,Sanitation,Yuan Renminbi
+693,392,Cleaning,Franc
+694,410,Lights,Zloty
+695,738,Miscellaneous,Yuan Renminbi
+696,281,Snacks,Forint
+697,811,Sanitation,Yuan Renminbi
+698,502,Cleaning,Euro
+699,962,Sanitation,Real
+700,67,Lights,Shilling
+701,449,Lights,Baht
+702,430,Sanitation,Rial
+703,463,Snacks,Peso
+704,542,Lights,Euro
+705,850,Cleaning,Bolivar
+706,434,Snacks,Peso
+707,50,Catering,Sol
+708,978,Sanitation,Yuan Renminbi
+709,338,Snacks,Euro
+710,701,Lights,Marka
+711,447,Miscellaneous,Ruble
+712,590,Catering,Real
+713,747,Sanitation,Yen
+714,433,Catering,Baht
+715,783,Sanitation,Shilling
+716,336,Catering,Yuan Renminbi
+717,10,Lights,Krone
+718,461,Snacks,Lev
+719,666,Sanitation,Yuan Renminbi
+720,718,Catering,Ruble
+721,223,Sanitation,Rupiah
+722,873,Sanitation,Yuan Renminbi
+723,796,Miscellaneous,Sol
+724,688,Miscellaneous,Yuan Renminbi
+725,272,Cleaning,Ruble
+726,233,Sanitation,Dollar
+727,477,Miscellaneous,Yuan Renminbi
+728,431,Cleaning,Marka
+729,409,Snacks,Peso
+730,556,Snacks,Afghani
+731,224,Catering,Dirham
+732,432,Lights,Peso
+733,804,Catering,Rupiah
+734,899,Cleaning,Sol
+735,265,Cleaning,Yuan Renminbi
+736,27,Snacks,Euro
+737,96,Lights,Baht
+738,945,Lights,Baht
+739,521,Catering,Dollar
+740,848,Sanitation,Peso
+741,176,Sanitation,Rupiah
+742,425,Cleaning,Ruble
+743,46,Sanitation,Rial
+744,425,Sanitation,Peso
+745,647,Catering,Baht
+746,317,Snacks,Yuan Renminbi
+747,551,Lights,Real
+748,399,Lights,Krona
+749,989,Lights,Yuan Renminbi
+750,915,Sound,Euro
+751,555,Cleaning,Yuan Renminbi
+752,661,Miscellaneous,Sol
+753,267,Lights,Rupiah
+754,241,Sanitation,Rial
+755,72,Sanitation,Yuan Renminbi
+756,144,Catering,Peso
+757,757,Miscellaneous,Peso
+758,88,Cleaning,Yuan Renminbi
+759,645,Catering,Shekel
+760,480,Sanitation,Zloty
+761,127,Catering,Ruble
+762,311,Lights,Dollar
+763,12,Catering,Yuan Renminbi
+764,62,Cleaning,Peso
+765,586,Lights,Pound
+766,503,Miscellaneous,Euro
+767,291,Sound,Rupiah
+768,463,Catering,Ruble
+769,713,Sound,Shilling
+770,867,Sanitation,Sol
+771,532,Snacks,Yuan Renminbi
+772,120,Catering,Colon
+773,14,Snacks,Pound
+774,121,Sanitation,Krona
+775,551,Snacks,Won
+776,507,Sound,Euro
+777,711,Sound,Quetzal
+778,431,Sound,Bolivar
+779,110,Catering,Yuan Renminbi
+780,271,Sanitation,Rupiah
+781,405,Cleaning,Euro
+782,280,Snacks,Yuan Renminbi
+783,826,Lights,Euro
+784,993,Sanitation,Dollar
+785,599,Sanitation,Ariary
+786,180,Cleaning,Euro
+787,722,Sanitation,Quetzal
+788,921,Cleaning,Ruble
+789,722,Lights,Ruble
+790,509,Lights,Zloty
+791,291,Catering,Shilling
+792,540,Miscellaneous,Shekel
+793,813,Cleaning,Som
+794,301,Catering,Yuan Renminbi
+795,187,Miscellaneous,Real
+796,362,Cleaning,Dinar
+797,681,Sound,Lek
+798,680,Miscellaneous,Sol
+799,82,Catering,Baht
+800,841,Snacks,Rupiah
+801,968,Cleaning,Dollar
+802,417,Catering,Dollar
+803,606,Cleaning,Krone
+804,376,Snacks,Dollar
+805,64,Lights,Real
+806,581,Cleaning,Kuna
+807,331,Snacks,Rupiah
+808,135,Lights,Yuan Renminbi
+809,760,Cleaning,Euro
+810,766,Sanitation,Rupiah
+811,743,Snacks,Koruna
+812,375,Miscellaneous,Rupiah
+813,892,Sanitation,Rupiah
+814,902,Cleaning,Yuan Renminbi
+815,864,Cleaning,Rupiah
+816,975,Sound,Yen
+817,155,Catering,Zloty
+818,720,Snacks,Rupiah
+819,624,Cleaning,Euro
+820,927,Snacks,Yuan Renminbi
+821,453,Sanitation,Sol
+822,115,Snacks,Ringgit
+823,303,Miscellaneous,Rupiah
+824,870,Sanitation,Shekel
+825,923,Miscellaneous,Yuan Renminbi
+826,564,Sanitation,Rand
+827,16,Cleaning,Rupee
+828,606,Lights,Dollar
+829,91,Sanitation,Denar
+830,388,Cleaning,Yuan Renminbi
+831,510,Cleaning,Kyat
+832,354,Sound,Franc
+833,543,Cleaning,Ruble
+834,849,Lights,Yen
+835,513,Lights,Dollar
+836,673,Sound,Ruble
+837,871,Snacks,Peso
+838,707,Sound,Dram
+839,482,Snacks,Peso
+840,70,Lights,Real
+841,411,Sanitation,Dram
+842,579,Lights,Ringgit
+843,69,Snacks,Naira
+844,589,Catering,Peso
+845,449,Lights,Zloty
+846,388,Cleaning,Ruble
+847,512,Miscellaneous,Kwacha
+848,998,Sanitation,Yuan Renminbi
+849,309,Sound,Ruble
+850,179,Sound,Peso
+851,383,Lights,Yuan Renminbi
+852,145,Miscellaneous,Som
+853,527,Cleaning,Manat
+854,43,Sound,Ruble
+855,76,Sanitation,Balboa
+856,658,Cleaning,Yuan Renminbi
+857,450,Miscellaneous,Zloty
+858,905,Sanitation,Ruble
+859,427,Cleaning,Dollar
+860,968,Snacks,Yuan Renminbi
+861,959,Cleaning,Rupiah
+862,370,Snacks,Ruble
+863,984,Catering,Som
+864,577,Miscellaneous,Yuan Renminbi
+865,363,Miscellaneous,Peso
+866,369,Sound,Ruble
+867,508,Snacks,Rupiah
+868,763,Miscellaneous,Rial
+869,471,Cleaning,Yuan Renminbi
+870,832,Sanitation,Peso
+871,823,Lights,Yuan Renminbi
+872,209,Sound,Dinar
+873,754,Sound,Yuan Renminbi
+874,295,Catering,Ruble
+875,293,Sanitation,Euro
+876,279,Lights,Rupiah
+877,274,Miscellaneous,Euro
+878,154,Miscellaneous,Euro
+879,676,Snacks,Rial
+880,53,Lights,Yuan Renminbi
+881,593,Snacks,Afghani
+882,320,Miscellaneous,Yuan Renminbi
+883,77,Miscellaneous,Peso
+884,648,Snacks,Zloty
+885,313,Sanitation,Rial
+886,415,Sound,Rupiah
+887,108,Lights,Ruble
+888,953,Sanitation,Real
+889,422,Miscellaneous,Yuan Renminbi
+890,346,Miscellaneous,Yuan Renminbi
+891,588,Catering,Afghani
+892,477,Sound,Lev
+893,220,Miscellaneous,Peso
+894,249,Cleaning,Euro
+895,680,Miscellaneous,Euro
+896,550,Lights,Yuan Renminbi
+897,213,Sound,Euro
+898,814,Miscellaneous,Peso
+899,91,Snacks,Yuan Renminbi
+900,732,Miscellaneous,Real
+901,533,Snacks,Yuan Renminbi
+902,223,Sanitation,Zloty
+903,329,Cleaning,Yuan Renminbi
+904,696,Sanitation,Yuan Renminbi
+905,908,Snacks,Krona
+906,593,Snacks,Quetzal
+907,997,Cleaning,Peso
+908,825,Sound,Yen
+909,174,Cleaning,Yuan Renminbi
+910,209,Catering,Franc
+911,358,Sound,Dollar
+912,795,Sanitation,Yuan Renminbi
+913,967,Catering,Dinar
+914,154,Sanitation,Rupiah
+915,879,Snacks,Sol
+916,315,Sanitation,Ruble
+917,713,Snacks,Koruna
+918,296,Catering,Naira
+919,590,Snacks,Euro
+920,619,Cleaning,Yuan Renminbi
+921,447,Cleaning,Afghani
+922,685,Lights,Ruble
+923,652,Catering,Dram
+924,409,Sanitation,Naira
+925,399,Catering,Naira
+926,650,Sanitation,Yuan Renminbi
+927,171,Sanitation,Peso
+928,523,Snacks,Real
+929,436,Cleaning,Denar
+930,74,Lights,Franc
+931,814,Lights,Ruble
+932,382,Catering,Peso
+933,130,Miscellaneous,Ruble
+934,408,Miscellaneous,Rupiah
+935,511,Lights,Som
+936,558,Sound,Dollar
+937,217,Catering,Yuan Renminbi
+938,597,Cleaning,Dollar
+939,596,Lights,Dollar
+940,838,Sanitation,Real
+941,126,Lights,Tenge
+942,997,Catering,Naira
+943,879,Miscellaneous,Yuan Renminbi
+944,525,Catering,Euro
+945,364,Sound,Euro
+946,475,Cleaning,Dong
+947,73,Catering,Dong
+948,334,Lights,Peso
+949,870,Snacks,Yen
+950,967,Sound,Yuan Renminbi
+951,563,Sound,Yuan Renminbi
+952,489,Catering,Peso
+953,244,Snacks,Litas
+954,921,Cleaning,Afghani
+955,403,Lights,Dollar
+956,330,Sound,Real
+957,147,Lights,Euro
+958,504,Cleaning,Yuan Renminbi
+959,609,Sound,Rupiah
+960,851,Sound,Zloty
+961,376,Catering,Euro
+962,364,Miscellaneous,Yuan Renminbi
+963,131,Cleaning,Tugrik
+964,615,Lights,Peso
+965,522,Miscellaneous,Hryvnia
+966,820,Snacks,Yuan Renminbi
+967,318,Snacks,Lek
+968,870,Sanitation,Yuan Renminbi
+969,372,Sound,Hryvnia
+970,50,Catering,Ruble
+971,551,Catering,Ruble
+972,723,Cleaning,Yuan Renminbi
+973,763,Sound,Krona
+974,324,Catering,Real
+975,689,Miscellaneous,Peso
+976,5,Sanitation,Yuan Renminbi
+977,782,Sanitation,Rupiah
+978,240,Catering,Peso
+979,997,Snacks,Peso
+980,765,Sanitation,Euro
+981,765,Lights,Dollar
+982,653,Cleaning,Yuan Renminbi
+983,483,Lights,Rupiah
+984,964,Sound,Peso
+985,150,Catering,Krona
+986,417,Sound,Krona
+987,118,Sound,Euro
+988,614,Sound,Dollar
+989,829,Lights,Ruble
+990,757,Sanitation,Ruble
+991,841,Sanitation,Yuan Renminbi
+992,297,Snacks,Euro
+993,324,Catering,Rupiah
+994,297,Snacks,Yuan Renminbi
+995,354,Sound,Yuan Renminbi
+996,35,Miscellaneous,Koruna
+997,812,Catering,Zloty
+998,141,Snacks,Peso
+999,871,Miscellaneous,Baht
+1000,983,Cleaning,Rupiah
