@@ -193,7 +193,7 @@ ORDER BY
 LIMIT 15;
 
 ```
-![adv_3](./doc/adv_3.png)
+![adv_3](./adv_3.png)
 
 ## Query 4
 - This query lists vendors within the same service category who have similar ratings, allowing organizers to explore comparable options.
