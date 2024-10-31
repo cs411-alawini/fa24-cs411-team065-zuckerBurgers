@@ -1,7 +1,7 @@
 # Database Implementation
 ## 1. Database Connection
 <!-- ![connection](./doc/connection.png) -->
-![show_db_tables](./doc/show_db_tables.png)
+![show_db_tables](./show_db_tables.png)
 
 
 ## 2. Table Structure and DDL Commands
