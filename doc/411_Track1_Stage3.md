@@ -76,7 +76,7 @@ CREATE TABLE Reviews (
 
 ## 3. Table Counts
 
-![counts](./doc/counts.png)
+![counts](./counts.png)
 
 
 # Advanced Queries
@@ -130,7 +130,7 @@ ORDER BY
 LIMIT 15;
 
 ```
-![adv_1][./doc/adv_1.png]
+![adv_1][./adv_1.png]
 
 ## Query 2
 - This query helps identify the most active event organizers by summarizing their performance metrics, such as total events, budgets, and reviews. By focusing on organizers who host events in larger venues and have a substantial number of events, it provides insights into which organizers are effectively managing events and could be valuable partners for future collaborations or promotions. This information can aid decision-making for event planning, marketing strategies, and resource allocation.
@@ -168,7 +168,7 @@ LIMIT 15;
 
 
 ```
-![adv_2][./doc/adv_2.png]
+![adv_2][./adv_2.png]
 
 ## Query 3
 - This query retrieves venues with a capacity greater than 100 and filters for upcoming events on or after 2024-09-17, without restricting the results to a specific manager. 
@@ -228,6 +228,26 @@ LIMIT 15;
 
 
 ```
-![adv_4][./doc/adv_4.png]
+![adv_4][./adv_4.png]
+
+
+# Indexing 
+
+- query 1 :
+![q1_1][./q1_1.png]
+![q1_2][./q1_2.png]
+![q1_3][./q1_3.png]
+![q1_4][./q1_4.png]
+- query 2 :
+![q2_1][./q2_1.png]
+![q2_2][./q2_2.png]
+- query 3 :
+![q3_1][./q3_1.png]
+![q3_2][./q3_2.png]
+- query 4 :
+![q4_1][./q4_1.png]
+![q4_2][./q4_2.png]
+## Indexing effect:
+- Given the findings from the analysis, the indexing strategy implemented did not yield noticeable performance enhancements for the query due to the small dataset size and the nature of the filtering operations. In larger datasets, these indexes would typically improve performance by reducing the time complexity associated with the joins and filtering operations. However, in this case, it appears that the dataset's size allows for efficient processing through direct access, resulting in little to no difference in performance.
 
 
