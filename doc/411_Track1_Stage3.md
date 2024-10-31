@@ -130,6 +130,7 @@ ORDER BY
 LIMIT 15;
 
 ```
+
 ![adv_1][./adv_1.png]
 
 ## Query 2
