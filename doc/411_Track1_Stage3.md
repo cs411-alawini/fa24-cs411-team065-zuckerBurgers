@@ -1,7 +1,7 @@
 # Database Implementation
 ## 1. Database Connection
-<!-- ![connection](./doc/connection.jpeg) -->
-![show_db_tables](./doc/show_db_tables.jpeg)
+<!-- ![connection](./doc/connection.png) -->
+![show_db_tables](./doc/show_db_tables.png)
 
 
 ## 2. Table Structure and DDL Commands
@@ -76,7 +76,7 @@ CREATE TABLE Reviews (
 
 ## 3. Table Counts
 
-![counts](./doc/counts.jpeg)
+![counts](./doc/counts.png)
 
 
 # Advanced Queries
@@ -130,7 +130,7 @@ ORDER BY
 LIMIT 15;
 
 ```
-![adv_1][./doc/adv_1.jpeg]
+![adv_1][./doc/adv_1.png]
 
 ## Query 2
 - This query helps identify the most active event organizers by summarizing their performance metrics, such as total events, budgets, and reviews. By focusing on organizers who host events in larger venues and have a substantial number of events, it provides insights into which organizers are effectively managing events and could be valuable partners for future collaborations or promotions. This information can aid decision-making for event planning, marketing strategies, and resource allocation.
@@ -168,7 +168,7 @@ LIMIT 15;
 
 
 ```
-![adv_2][./doc/adv_2.jpeg]
+![adv_2][./doc/adv_2.png]
 
 ## Query 3
 - This query retrieves venues with a capacity greater than 100 and filters for upcoming events on or after 2024-09-17, without restricting the results to a specific manager. 
@@ -192,7 +192,7 @@ ORDER BY
 LIMIT 15;
 
 ```
-![adv_3][./doc/adv_3.jpeg]
+![adv_3][./doc/adv_3.png]
 
 ## Query 4
 - This query lists vendors within the same service category who have similar ratings, allowing organizers to explore comparable options.
@@ -228,6 +228,6 @@ LIMIT 15;
 
 
 ```
-![adv_4][./doc/adv_4.jpeg]
+![adv_4][./doc/adv_4.png]
 
 
