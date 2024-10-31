@@ -235,7 +235,7 @@ LIMIT 15;
 # Indexing 
 
 - query 1 :
-![q1_1](./q1_1.png]
+![q1_1](./q1_1.png)
 ![q1_2](./q1_2.png)
 ![q1_3](./q1_3.png)
 ![q1_4](./q1_4.png)
