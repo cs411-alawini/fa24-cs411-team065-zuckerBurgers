@@ -234,28 +234,51 @@ LIMIT 15;
 
 # Indexing 
 
-- query 1 :
+- ## Query 1 : Vanilla Query performance before indexing
   ![Q1_Vanilla](./indexing_screenshots/Q1_Vanilla.png)
+  Index 1 : CREATE INDEX idx_venues_maxcapacity ON Venues (MaxCapacity);
   ![Q1_idx1](./indexing_screenshots/Q1_idx1.png)
+
+  Index 2 : CREATE INDEX idx_reviews_reviewdate ON Reviews (ReviewDate);
   ![Q1_idx2](./indexing_screenshots/Q1_idx2.png)
+
+  Index 3 : CREATE INDEX idx_reviews_reviewdate_rating ON Reviews (ReviewDate, Rating);
   ![Q1_idx3](./indexing_screenshots/Q1_idx3.png)
 
-- query 2 :
+- ## Query 2 : Vanilla Query performance before indexing
   ![Q2_Vanilla](./indexing_screenshots/Q2_Vanilla.png)
+
+  Index 1 : CREATE INDEX idx_maxcapacity ON Venues (MaxCapacity);
   ![Q2_idx1](./indexing_screenshots/Q2_idx1.png)
+
+  Index 2 : CREATE INDEX idx_usertype ON Users (UserType);
   ![Q2_idx2](./indexing_screenshots/Q2_idx2.png)
+
+  Index 3 : CREATE INDEX idx_eventdate_eventtype ON Events (EventDate, EventType);
   ![Q2_idx3](./indexing_screenshots/Q2_idx3.png)
 
-- query 3 :
+- ## Query 3 : Vanilla Query performance before indexing
   ![Q3_Vanilla](./indexing_screenshots/Q3_Vanilla.png)
+
+  Index 1 : CREATE INDEX idx_maxcapacity ON Venues (MaxCapacity);
   ![Q3_idx1](./indexing_screenshots/Q3_idx1.png)
+
+  Index 2 : CREATE INDEX idx_events_eventdate ON Events (EventDate);
   ![Q3_idx2](./indexing_screenshots/Q3_idx2.png)
+
+  Index 3 : CREATE INDEX idx_events_eventdate_budget ON Events (EventDate, Budget);
   ![Q3_idx3](./indexing_screenshots/Q3_idx3.png)
 
-- query 4 :
+- ## Query 4 : Vanilla Query performance before indexing
   ![Q4_Vanilla](./indexing_screenshots/Q4_Vanilla.png)
+
+  Index 1 : CREATE INDEX idx_vendors_servicecategory ON Vendors (ServiceCategory);
   ![Q4_idx1](./indexing_screenshots/Q4_idx1.png)
+
+  Index 2 : CREATE INDEX idx_reviews_servicecategory_rating ON Reviews (Rating);
   ![Q4_idx2](./indexing_screenshots/Q4_idx2.png)
+
+  Index 3 : CREATE INDEX idx_vendors_servicecategory_baseprice ON Vendors (ServiceCategory, BasePrice);
   ![Q4_idx3](./indexing_screenshots/Q4_idx3.png)
 
 ## Indexing effect:
