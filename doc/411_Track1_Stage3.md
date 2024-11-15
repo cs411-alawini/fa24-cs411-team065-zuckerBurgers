@@ -235,28 +235,28 @@ LIMIT 15;
 # Indexing 
 
 - query 1 :
-  ![Q1 Vanilla](./doc/indexing_screenshots/Q1_Vanilla.png)
-  ![Q1 idx1](./doc/indexing_screenshots/Q1_idx1.png)
-  ![Q1 idx2](./doc/indexing_screenshots/Q1_idx2.png)
-  ![Q1 idx3](./doc/indexing_screenshots/Q1_idx3.png)
+  ![Q1_Vanilla](./doc/indexing_screenshots/Q1_Vanilla.png)
+  ![Q1_idx1](./doc/indexing_screenshots/Q1_idx1.png)
+  ![Q1_idx2](./doc/indexing_screenshots/Q1_idx2.png)
+  ![Q1_idx3](./doc/indexing_screenshots/Q1_idx3.png)
 
 - query 2 :
-  ![Q2 Vanilla](./doc/indexing_screenshots/Q2_Vanilla.png)
-  ![Q2 idx1](./doc/indexing_screenshots/Q2_idx1.png)
-  ![Q2 idx2](./doc/indexing_screenshots/Q2_idx2.png)
-  ![Q2 idx3](./doc/indexing_screenshots/Q2_idx3.png)
+  ![Q2_Vanilla](./doc/indexing_screenshots/Q2_Vanilla.png)
+  ![Q2_idx1](./doc/indexing_screenshots/Q2_idx1.png)
+  ![Q2_idx2](./doc/indexing_screenshots/Q2_idx2.png)
+  ![Q2_idx3](./doc/indexing_screenshots/Q2_idx3.png)
 
 - query 3 :
-  ![Q3 Vanilla](./doc/indexing_screenshots/Q3_Vanilla.png)
-  ![Q3 idx1](./doc/indexing_screenshots/Q3_idx1.png)
-  ![Q3 idx2](./doc/indexing_screenshots/Q3_idx2.png)
-  ![Q3 idx3](./doc/indexing_screenshots/Q3_idx3.png)
+  ![Q3_Vanilla](./doc/indexing_screenshots/Q3_Vanilla.png)
+  ![Q3_idx1](./doc/indexing_screenshots/Q3_idx1.png)
+  ![Q3_idx2](./doc/indexing_screenshots/Q3_idx2.png)
+  ![Q3_idx3](./doc/indexing_screenshots/Q3_idx3.png)
 
 - query 4 :
-  ![Q4 Vanilla](./doc/indexing_screenshots/Q4_Vanilla.png)
-  ![Q4 idx1](./doc/indexing_screenshots/Q4_idx1.png)
-  ![Q4 idx2](./doc/indexing_screenshots/Q4_idx2.png)
-  ![Q4 idx3](./doc/indexing_screenshots/Q4_idx3.png)
+  ![Q4_Vanilla](./doc/indexing_screenshots/Q4_Vanilla.png)
+  ![Q4_idx1](./doc/indexing_screenshots/Q4_idx1.png)
+  ![Q4_idx2](./doc/indexing_screenshots/Q4_idx2.png)
+  ![Q4_idx3](./doc/indexing_screenshots/Q4_idx3.png)
 
 ## Indexing effect:
 
