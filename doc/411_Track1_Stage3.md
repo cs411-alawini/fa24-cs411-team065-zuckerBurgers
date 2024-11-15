@@ -235,50 +235,90 @@ LIMIT 15;
 # Indexing 
 
 - ## Query 1 : Vanilla Query performance before indexing
+  The vanilla query’s performance is based on the dataset size and filtering operations without any indexing. This baseline provides insight into the query performance without any optimization.
   ![Q1_Vanilla](./indexing_screenshots/Q1_Vanilla.png)
-  Index 1 : CREATE INDEX idx_venues_maxcapacity ON Venues (MaxCapacity);
+  ## Index 1 : CREATE INDEX idx_venues_maxcapacity ON Venues (MaxCapacity);
+  ### Reason for No Improvement:
+    - The MaxCapacity column in the Venues table might not have been heavily used in filtering or sorting operations in this query. If MaxCapacity is not involved in frequent or large-scale filtering (i.e., the query doesn't frequently filter by MaxCapacity), the index will have little effect on the performance.
+    - Given the small dataset size, the database engine might have performed a full scan without noticeable performance issues, negating the impact of the index.
   ![Q1_idx1](./indexing_screenshots/Q1_idx1.png)
 
-  Index 2 : CREATE INDEX idx_reviews_reviewdate ON Reviews (ReviewDate);
+  ## Index 2 : CREATE INDEX idx_reviews_reviewdate ON Reviews (ReviewDate);
+  ### Reason for No Improvement:
+    - Similar to the MaxCapacity index, if the ReviewDate column isn't actively involved in filtering or sorting in the query, the index won’t contribute to performance improvements.
+    - If the ReviewDate is used in very few rows, the optimizer may decide that a table scan is just as efficient, especially in smaller datasets like ours.
   ![Q1_idx2](./indexing_screenshots/Q1_idx2.png)
 
-  Index 3 : CREATE INDEX idx_reviews_reviewdate_rating ON Reviews (ReviewDate, Rating);
+  ## Index 3 : CREATE INDEX idx_reviews_reviewdate_rating ON Reviews (ReviewDate, Rating);
+  ### Reason for No Improvement:
+    - While this composite index involves both ReviewDate and Rating, it's only effective when both columns are heavily used in filtering or sorting. If the query does not filter or sort by both columns or if the dataset is small, the index does not provide a significant performance benefit.
+    - The small dataset size likely means the database could handle the query efficiently even without the index.
   ![Q1_idx3](./indexing_screenshots/Q1_idx3.png)
 
 - ## Query 2 : Vanilla Query performance before indexing
   ![Q2_Vanilla](./indexing_screenshots/Q2_Vanilla.png)
 
-  Index 1 : CREATE INDEX idx_maxcapacity ON Venues (MaxCapacity);
+  ## Index 1 : CREATE INDEX idx_maxcapacity ON Venues (MaxCapacity);
+  ### Reason for No Improvement:
+   - If MaxCapacity is not used for filtering or sorting in the query frequently (for example, if it’s only used for occasional joins but not heavily filtered), this index won’t be used effectively.
+   - The small dataset size means the query could execute without any noticeable delay, so the index doesn't result in a performance boost.
   ![Q2_idx1](./indexing_screenshots/Q2_idx1.png)
 
-  Index 2 : CREATE INDEX idx_usertype ON Users (UserType);
+  ## Index 2 : CREATE INDEX idx_usertype ON Users (UserType);
+  ### Reason for No Improvement:
+   - If the query does not filter by UserType or if the UserType column has a limited number of distinct values, then the database might not use the index.
+   - The small size of the dataset likely means a full scan would be just as fast as using an index.
   ![Q2_idx2](./indexing_screenshots/Q2_idx2.png)
 
-  Index 3 : CREATE INDEX idx_eventdate_eventtype ON Events (EventDate, EventType);
+  ## Index 3 : CREATE INDEX idx_eventdate_eventtype ON Events (EventDate, EventType);
+  ### Reason for No Improvement:
+   - If the query does not filter or sort heavily by both EventDate and EventType, or if the dataset is small enough that a full scan or direct access is efficient, the composite index will not be used to improve performance.
+   - The small dataset might lead the database engine to choose a full table scan over using the index, particularly if the indexed columns aren't central to the query's filtering or sorting conditions.
   ![Q2_idx3](./indexing_screenshots/Q2_idx3.png)
 
 - ## Query 3 : Vanilla Query performance before indexing
   ![Q3_Vanilla](./indexing_screenshots/Q3_Vanilla.png)
 
-  Index 1 : CREATE INDEX idx_maxcapacity ON Venues (MaxCapacity);
+  ## Index 1 : CREATE INDEX idx_maxcapacity ON Venues (MaxCapacity);
+  ### Reason for No Improvement:
+   - If MaxCapacity is not being used for filtering or joining, or if the query does not require efficient lookup for this column, this index will have little to no effect on performance.
+   - For smaller datasets, even without the index, the query might still execute efficiently.
   ![Q3_idx1](./indexing_screenshots/Q3_idx1.png)
 
-  Index 2 : CREATE INDEX idx_events_eventdate ON Events (EventDate);
+  ## Index 2 : CREATE INDEX idx_events_eventdate ON Events (EventDate);
+  ### Reason for No Improvement:
+
+    - The EventDate column may not be heavily used in filtering or sorting. If the query is not performing operations that heavily depend on EventDate, the index might not be leveraged.
+    - If the dataset size is small, the database could process the query without needing to use the index.
   ![Q3_idx2](./indexing_screenshots/Q3_idx2.png)
 
-  Index 3 : CREATE INDEX idx_events_eventdate_budget ON Events (EventDate, Budget);
+  ## Index 3 : CREATE INDEX idx_events_eventdate_budget ON Events (EventDate, Budget);
+  ### Reason for No Improvement:
+   - This composite index would only improve performance if both EventDate and Budget are involved in filtering or sorting in the query. If the query does not filter by both columns together, the index will not be useful.
+   - A small dataset means the query might be processed efficiently without needing to use the index.
   ![Q3_idx3](./indexing_screenshots/Q3_idx3.png)
 
 - ## Query 4 : Vanilla Query performance before indexing
   ![Q4_Vanilla](./indexing_screenshots/Q4_Vanilla.png)
 
-  Index 1 : CREATE INDEX idx_vendors_servicecategory ON Vendors (ServiceCategory);
+  ## Index 1 : CREATE INDEX idx_vendors_servicecategory ON Vendors (ServiceCategory);
+  ### Reason for No Improvement:
+
+   - If ServiceCategory is not used frequently for filtering or sorting in the query, or if it’s part of an operation that doesn’t benefit from indexing, the index will not have an impact.
+   - Small datasets make the impact of such an index less noticeable, as full scans can be just as fast.
   ![Q4_idx1](./indexing_screenshots/Q4_idx1.png)
 
-  Index 2 : CREATE INDEX idx_reviews_servicecategory_rating ON Reviews (Rating);
+  ## Index 2 : CREATE INDEX idx_reviews_servicecategory_rating ON Reviews (Rating);
+  ### Reason for No Improvement:
+
+   - If Rating is not heavily involved in filtering or sorting, the index won't provide a noticeable benefit. A table scan may be as efficient for smaller datasets.
   ![Q4_idx2](./indexing_screenshots/Q4_idx2.png)
 
-  Index 3 : CREATE INDEX idx_vendors_servicecategory_baseprice ON Vendors (ServiceCategory, BasePrice);
+  ## Index 3 : CREATE INDEX idx_vendors_servicecategory_baseprice ON Vendors (ServiceCategory, BasePrice);
+  ### Reason for No Improvement:
+
+   - This composite index would help if the query filters by both ServiceCategory and BasePrice together. If the query only uses one of these columns or doesn’t involve them heavily in filtering, the index will not be used.
+   - In the case of a small dataset, the database can efficiently handle the query without needing to use the composite index.
   ![Q4_idx3](./indexing_screenshots/Q4_idx3.png)
 
 ## Indexing effect:
