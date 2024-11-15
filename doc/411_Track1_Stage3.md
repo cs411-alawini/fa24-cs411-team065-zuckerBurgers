@@ -235,10 +235,10 @@ LIMIT 15;
 # Indexing 
 
 - query 1 :
-  ![Q1_Vanilla](./doc/indexing_screenshots/Q1_Vanilla.png)
-  ![Q1_idx1](./doc/indexing_screenshots/Q1_idx1.png)
-  ![Q1_idx2](./doc/indexing_screenshots/Q1_idx2.png)
-  ![Q1_idx3](./doc/indexing_screenshots/Q1_idx3.png)
+  ![Q1_Vanilla](./indexing_screenshots/Q1_Vanilla.png)
+  ![Q1_idx1](./indexing_screenshots/Q1_idx1.png)
+  ![Q1_idx2](./indexing_screenshots/Q1_idx2.png)
+  ![Q1_idx3](./indexing_screenshots/Q1_idx3.png)
 
 - query 2 :
   ![Q2_Vanilla](./doc/indexing_screenshots/Q2_Vanilla.png)
