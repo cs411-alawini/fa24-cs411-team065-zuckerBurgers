@@ -235,19 +235,31 @@ LIMIT 15;
 # Indexing 
 
 - query 1 :
-![q1_1](./q1_1.png)
-![q1_2](./q1_2.png)
-![q1_3](./q1_3.png)
-![q1_4](./q1_4.png)
+  ![Q1 Vanilla](./doc/indexing_screenshots/Q1_Vanilla.png)
+  ![Q1 idx1](./doc/indexing_screenshots/Q1_idx1.png)
+  ![Q1 idx2](./doc/indexing_screenshots/Q1_idx2.png)
+  ![Q1 idx3](./doc/indexing_screenshots/Q1_idx3.png)
+
 - query 2 :
-![q2_1](./q2_1.png)
-![q2_2](./q2_2.png)
+  ![Q2 Vanilla](./doc/indexing_screenshots/Q2_Vanilla.png)
+  ![Q2 idx1](./doc/indexing_screenshots/Q2_idx1.png)
+  ![Q2 idx2](./doc/indexing_screenshots/Q2_idx2.png)
+  ![Q2 idx3](./doc/indexing_screenshots/Q2_idx3.png)
+
 - query 3 :
-![q3_1](./q3_1.png)
-![q3_2](./q3_2.png)
+  ![Q3 Vanilla](./doc/indexing_screenshots/Q3_Vanilla.png)
+  ![Q3 idx1](./doc/indexing_screenshots/Q3_idx1.png)
+  ![Q3 idx2](./doc/indexing_screenshots/Q3_idx2.png)
+  ![Q3 idx3](./doc/indexing_screenshots/Q3_idx3.png)
+
 - query 4 :
-![q4_1](./q4_1.png)
-![q4_2](./q4_2.png)
+  ![Q4 Vanilla](./doc/indexing_screenshots/Q4_Vanilla.png)
+  ![Q4 idx1](./doc/indexing_screenshots/Q4_idx1.png)
+  ![Q4 idx2](./doc/indexing_screenshots/Q4_idx2.png)
+  ![Q4 idx3](./doc/indexing_screenshots/Q4_idx3.png)
+
+## Indexing effect:
+
 ## Indexing effect:
 - Given the findings from the analysis, the indexing strategy implemented did not yield noticeable performance enhancements for the query due to the small dataset size and the nature of the filtering operations. In larger datasets, these indexes would typically improve performance by reducing the time complexity associated with the joins and filtering operations. However, in this case, it appears that the dataset's size allows for efficient processing through direct access, resulting in little to no difference in performance.
 
