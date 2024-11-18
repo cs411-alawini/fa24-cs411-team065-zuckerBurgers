@@ -1,0 +1,1 @@
+For syncing user data to a custom Google Cloud database, Clerk is simpler and more flexible due to its webhook-first approach, while Firebase requires additional setup but offers tighter integration with other Google Cloud services.
