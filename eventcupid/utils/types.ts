@@ -23,6 +23,14 @@ export type VendorVenueType = {
   reviews: string[];
 };
 
+export type Venue = {
+  id: number;
+  manager_id: number;
+  name: string;
+  address: string;
+  max_capacity: number;
+};
+
 
 export enum EventTypes {
   Wedding = 'wedding',
