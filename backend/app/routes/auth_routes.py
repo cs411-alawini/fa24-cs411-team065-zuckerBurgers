@@ -4,6 +4,7 @@ from app.models.vendor import Vendor
 from app.models.venue import Venue
 from app import db
 import logging
+from sqlalchemy import text
 
 # Set up basic logging
 logging.basicConfig(level=logging.DEBUG)
@@ -267,6 +268,71 @@ def get_venue(venue_id):
         logging.debug(f"Returning venue details: {venue_data}")
         return jsonify({'message': 'Venue found', 'venue': venue_data}), 200
 
+    except Exception as e:
+        logging.error(f"Unexpected error: {str(e)}")
+        return jsonify({'message': 'An unexpected error occurred'}), 500
+
+@bp.route('/venues/<int:venue_id>/edit', methods=['POST'])
+def edit_venue(venue_id):
+    try:
+        # Parse the input JSON request
+        data = request.get_json()
+        logging.debug(f"Received data for venue update: {data}")
+
+        # Required fields for updating a venue
+        required_fields = ['manager_id', 'name', 'address', 'max_capacity']
+        missing_fields = [field for field in required_fields if field not in data]
+        if missing_fields:
+            logging.error(f"Missing fields: {', '.join(missing_fields)}")
+            return jsonify({'message': f'Missing fields: {", ".join(missing_fields)}'}), 400
+
+        # Validate the input data
+        manager_id = data.get('manager_id')
+        name = data.get('name')
+        address = data.get('address')
+        max_capacity = data.get('max_capacity')
+
+        if not isinstance(max_capacity, int) or max_capacity <= 0:
+            logging.error("Invalid max capacity value")
+            return jsonify({'message': 'Max capacity must be a positive integer'}), 400
+
+        # Perform the update using raw SQL
+        update_query = text("""
+            UPDATE Venues
+            SET ManagerID = :manager_id,
+                VenueName = :name,
+                Address = :address,
+                MaxCapacity = :max_capacity
+            WHERE VenueID = :venue_id
+        """)
+
+        result = db.session.execute(update_query, {
+            'manager_id': manager_id,
+            'name': name,
+            'address': address,
+            'max_capacity': max_capacity,
+            'venue_id': venue_id
+        })
+
+        # Check if any row was updated
+        if result.rowcount == 0:
+            logging.error(f"Venue with ID {venue_id} not found.")
+            return jsonify({'message': f'Venue with ID {venue_id} not found.'}), 404
+
+        # Commit the changes to the database
+        db.session.commit()
+
+        logging.info(f"Venue with ID {venue_id} updated successfully.")
+        return jsonify({'message': 'Venue updated successfully'}), 200
+
+    except IntegrityError as e:
+        db.session.rollback()
+        logging.error(f"IntegrityError: {str(e)}")
+        return jsonify({'message': 'Invalid data or conflict in updating venue'}), 409
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        logging.error(f"SQLAlchemyError: {str(e)}")
+        return jsonify({'message': 'An error occurred while updating the venue'}), 500
     except Exception as e:
         logging.error(f"Unexpected error: {str(e)}")
         return jsonify({'message': 'An unexpected error occurred'}), 500
