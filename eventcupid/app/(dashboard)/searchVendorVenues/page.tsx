@@ -1,15 +1,12 @@
 import VVlist from "@/components/VenderVenue/VenderVenuesList";
-import FilterForm from "@/components/VenderVenue/FilterForm";
-import {
-  dehydrate,
-  HydrationBoundary,
-  QueryClient,
-} from "@tanstack/react-query";
+import VenueAdditionForm from "@/components/VenderVenue/VenueAdditionForm";
+import VenueFilterForm from "@/components/VenderVenue/VenueFilterForm";
 
 async function AllVenderVenuesPage() {
   return (
     <>
-      <FilterForm />
+      <VenueFilterForm />
+      <VenueAdditionForm />
       <VVlist />
     </>
   );

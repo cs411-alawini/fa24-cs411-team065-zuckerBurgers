@@ -3,6 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_socketio import SocketIO
 from dotenv import load_dotenv
+from flask_cors import CORS
+
 import os
 
 # Initialize SQLAlchemy, Migrate, and SocketIO
@@ -14,7 +16,7 @@ def create_app():
     # Load environment variables from .env file
     load_dotenv()
     app = Flask(__name__)
-
+    CORS(app)
     # Load configuration settings
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
