@@ -42,3 +42,14 @@ export const createEventSchema = z.object({
 });
 
 export type CreateEventType = z.infer<typeof createEventSchema>;
+
+// utils/types.ts
+export interface ServiceType {
+  id: string;
+  name: string;
+  price: number;
+  vendorId: string;
+  bundleId: string | null;
+  serviceCategory: string;
+  description: string;
+}

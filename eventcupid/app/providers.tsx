@@ -1,5 +1,6 @@
 "use client";
 import { ThemeProvider } from "./theme-provider";
+import { RoleProvider } from "./RoleProvider";
 
 function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -9,7 +10,7 @@ function Providers({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      {children}
+      <RoleProvider>{children}</RoleProvider>
     </ThemeProvider>
   );
 }

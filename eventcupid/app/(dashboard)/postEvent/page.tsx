@@ -1,9 +1,9 @@
 import React from "react";
-import CreateVenderForm from "@/components/CreateVenderForm";
+import CreateEventForm from "@/components/CreateEventForm";
 function PostEvent() {
   return (
     <>
-      <CreateVenderForm />
+      <CreateEventForm />
     </>
   );
 }

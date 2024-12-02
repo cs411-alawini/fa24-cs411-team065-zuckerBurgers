@@ -1,3 +1,5 @@
+"use client";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -6,15 +8,26 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { AlignLeft } from "lucide-react";
 import { Button } from "./ui/button";
-import links from "@/utils/links";
+import { useRole } from "@/app/RoleProvider";
+import { EventHostLinks, VenueLinks, VendorLinks } from "@/utils/links";
+
 import Link from "next/link";
 function DropdownLinks() {
+  const { role } = useRole();
+
+  let links: { href: string; label: string; icon: React.ReactNode }[] = [];
+  if (role === "event-host") {
+    links = EventHostLinks;
+  } else if (role === "venue") {
+    links = VenueLinks;
+  } else if (role === "vendor") {
+    links = VendorLinks;
+  }
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild className="lg:hidden">
         <Button variant="outline" size="icon">
           <AlignLeft />
-
           <span className="sr-only">Toggle links</span>
         </Button>
       </DropdownMenuTrigger>

@@ -1,7 +1,6 @@
-import React from "react";
+// app/negotiate/page.tsx
+import NegotiatePage from "@/components/Negotiate/NegotiatePage";
 
-function NegotiatePage() {
-  return <div className="text-4xl">NegotiatePage</div>;
+export default function NegotiationPage() {
+  return <NegotiatePage />;
 }
-
-export default NegotiatePage;

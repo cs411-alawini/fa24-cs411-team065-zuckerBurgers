@@ -1,4 +1,6 @@
+// utils/links.tsx
 import { AreaChart, Layers, AppWindow } from "lucide-react";
+import React from "react";
 
 type NavLink = {
   href: string;
@@ -6,10 +8,10 @@ type NavLink = {
   icon: React.ReactNode;
 };
 
-const links: NavLink[] = [
+export const EventHostLinks: NavLink[] = [
   {
     href: "/postEvent",
-    label: "post event",
+    label: "Post Event",
     icon: <Layers />,
   },
   {
@@ -18,10 +20,44 @@ const links: NavLink[] = [
     icon: <AppWindow />,
   },
   {
-    href: "/Negotiate",
+    href: "/negotiate",
     label: "Negotiate",
     icon: <AreaChart />,
   },
 ];
 
-export default links;
+export const VenueLinks: NavLink[] = [
+  {
+    href: "/postVenue",
+    label: "Post Venue",
+    icon: <Layers />,
+  },
+  {
+    href: "/CreateBundles",
+    label: "Create Bundles",
+    icon: <AppWindow />,
+  },
+  {
+    href: "/negotiate",
+    label: "Negotiate",
+    icon: <AreaChart />,
+  },
+];
+
+export const VendorLinks: NavLink[] = [
+  {
+    href: "/postVendor",
+    label: "Post Vendor",
+    icon: <Layers />,
+  },
+  {
+    href: "/CreateBundles",
+    label: "Create Bundles",
+    icon: <AppWindow />,
+  },
+  {
+    href: "/negotiate",
+    label: "Negotiate",
+    icon: <AreaChart />,
+  },
+];
