@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import {
@@ -9,7 +9,24 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
+import usePlacesAutocomplete, {
+  getGeocode,
+  getLatLng,
+} from "use-places-autocomplete";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 function FilterForm() {
   const [priceRange, setPriceRange] = useState<number[]>([0, 10000]);
 
@@ -17,7 +34,35 @@ function FilterForm() {
     e.preventDefault();
     // Handle form submission with selected filters
   };
+  const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 });
+  const [open, setOpen] = useState(false);
 
+  const {
+    ready,
+    value,
+    suggestions: { status, data },
+    setValue,
+    clearSuggestions,
+  } = usePlacesAutocomplete({
+    requestOptions: { componentRestrictions: { country: "us" } },
+    debounce: 300,
+  });
+
+  const handleSelect = async (address: string) => {
+    setValue(address, false);
+    clearSuggestions();
+    setOpen(false);
+
+    try {
+      const results = await getGeocode({ address });
+      const { lat, lng } = await getLatLng(results[0]);
+      setCoordinates({ lat, lng });
+    } catch (error) {
+      console.error("😱 Error: ", error);
+    }
+  };
+
+  const mapCenter = useMemo(() => coordinates, [coordinates]);
   return (
     <form
       className="bg-muted mb-16 p-8 grid gap-4 rounded-lg sm:grid-cols-2 md:grid-cols-3"
@@ -75,6 +120,54 @@ function FilterForm() {
         </div>
       </div>
 
+      {/* Location Input */}
+      <div className="relative">
+        <Popover open={open} onOpenChange={setOpen}>
+          <PopoverTrigger asChild>
+            <Input
+              type="text"
+              placeholder="Location"
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              className="w-full"
+            />
+          </PopoverTrigger>
+          <PopoverContent className="w-[300px] p-0">
+            <Command>
+              <CommandList>
+                <CommandEmpty>No results found.</CommandEmpty>
+                <CommandGroup>
+                  {status === "OK" &&
+                    data.map(({ place_id, description }) => (
+                      <CommandItem
+                        key={place_id}
+                        onSelect={() => handleSelect(description)}
+                      >
+                        {description}
+                      </CommandItem>
+                    ))}
+                </CommandGroup>
+              </CommandList>
+            </Command>
+          </PopoverContent>
+        </Popover>
+
+        {coordinates.lat !== 0 && coordinates.lng !== 0 && (
+          <div className="mt-2 h-[200px] rounded-md overflow-hidden">
+            <LoadScript
+              googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
+            >
+              <GoogleMap
+                mapContainerStyle={{ width: "100%", height: "100%" }}
+                center={mapCenter}
+                zoom={13}
+              >
+                <Marker position={coordinates} />
+              </GoogleMap>
+            </LoadScript>
+          </div>
+        )}
+      </div>
       {/* Submit Button */}
       <Button
         type="submit"
