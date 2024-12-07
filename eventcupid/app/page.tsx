@@ -22,11 +22,6 @@ export default function Home() {
     <main className="bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen text-white">
       <header className="max-w-6xl mx-auto px-4 sm:px-8 py-6 flex justify-between items-center">
         <Image src={Logo} alt="logo" className="w-32 h-auto" />
-        <nav>
-          <Button asChild variant="ghost">
-            <Link href="/login">Login</Link>
-          </Button>
-        </nav>
       </header>
       <section className="max-w-6xl mx-auto px-4 sm:px-8 h-screen -mt-20 grid lg:grid-cols-[1fr,400px] items-center">
         <div>
@@ -46,7 +41,6 @@ export default function Home() {
             >
               <Link href="/postEvent">Start As Event Host</Link>
             </Button>
-            {/* new line */}
             <br />
             <Button
               asChild
@@ -61,7 +55,7 @@ export default function Home() {
               className="mt-6 px-6 py-3 text-lg font-semibold bg-yellow-300 text-black hover:bg-yellow-400"
               onClick={() => handleStart("vendor")}
             >
-              <Link href="/searchVendorVenues">Start As Vendor</Link>
+              <Link href="/postVendor">Start As Vendor</Link>
             </Button>
           </a>
         </div>
