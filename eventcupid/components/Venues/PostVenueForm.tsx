@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import { z } from "zod";
-import { useForm } from "react-hook-form";
+import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Form } from "@/components/ui/form";
 
 const venueSchema = z.object({
   managerId: z
@@ -26,14 +25,16 @@ type VenueFormType = z.infer<typeof venueSchema>;
 function PostVenueForm() {
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
+  const methods = useForm<VenueFormType>({
+    resolver: zodResolver(venueSchema),
+  });
+
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<VenueFormType>({
-    resolver: zodResolver(venueSchema),
-  });
+  } = methods;
 
   const onSubmit = async (data: VenueFormType) => {
     console.log("Form Data Submitted:", data);
@@ -68,7 +69,7 @@ function PostVenueForm() {
   };
 
   return (
-    <Form>
+    <FormProvider {...methods}>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-muted p-8 rounded max-w-4xl mx-auto"
@@ -168,7 +169,7 @@ function PostVenueForm() {
           </div>
         )}
       </form>
-    </Form>
+    </FormProvider>
   );
 }
 
