@@ -28,13 +28,16 @@ export const useRole = () => {
 export function RoleProvider({ children }: { children: ReactNode }) {
   const [role, setRole] = useState<Role>(() => {
     if (typeof window !== "undefined") {
-      return (localStorage.getItem("role") as Role) || null;
+      const storedRole = localStorage.getItem("role") as Role;
+      console.log("Retrieved role from localStorage:", storedRole); // Debug log
+      return storedRole || null;
     }
     return null;
   });
 
   useEffect(() => {
-    if (role) {
+    if (role && role !== localStorage.getItem("role")) {
+      console.log("Saving role to localStorage:", role);
       localStorage.setItem("role", role);
     }
   }, [role]);

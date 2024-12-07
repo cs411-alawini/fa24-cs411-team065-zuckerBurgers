@@ -17,6 +17,8 @@ export default function Home() {
     setRole(role);
     router.push("/dashboard");
   };
+  const { role } = useRole();
+  console.log("Current role:", role); // Debug log
 
   return (
     <main className="bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen text-white">

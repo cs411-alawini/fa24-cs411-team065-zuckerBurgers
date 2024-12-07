@@ -53,3 +53,12 @@ export interface ServiceType {
   serviceCategory: string;
   description: string;
 }
+
+
+export interface Venue {
+  id: number;
+  manager_id: number;
+  name: string;
+  address: string;
+  max_capacity: number;
+}
