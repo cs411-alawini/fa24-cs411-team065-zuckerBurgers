@@ -62,3 +62,23 @@ export interface Venue {
   address: string;
   max_capacity: number;
 }
+
+// utils/types.ts
+
+export interface User {
+  UserID: number;
+  Username: string;
+  Email: string;
+  PhoneNumber: string;
+  UserType: 'Organizer' | 'Manager';
+}
+
+// utils/types.ts
+
+export interface User {
+  UserID: number;
+  Username: string;
+  Email: string;
+  PhoneNumber: string;
+  UserType: 'Organizer' | 'Manager';
+}

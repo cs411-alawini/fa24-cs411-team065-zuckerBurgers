@@ -1,5 +1,4 @@
 import VVlist from "@/components/VenderVenue/VenderVenuesList";
-import FilterForm from "@/components/VenderVenue/FilterForm";
 import {
   dehydrate,
   HydrationBoundary,
@@ -9,7 +8,6 @@ import {
 async function AllVenderVenuesPage() {
   return (
     <>
-      <FilterForm />
       <VVlist />
     </>
   );

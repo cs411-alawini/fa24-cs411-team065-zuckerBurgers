@@ -5,7 +5,6 @@ import SearchVendors from "@/components/VenderVenue/SearchVendors";
 export default function PostVendorPage() {
    return (
        <>
-         <PostVendorForm />
          <SearchVendors />
        </>
      );

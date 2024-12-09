@@ -16,7 +16,7 @@ function VVCard({ venue, refreshList }: { venue: Venue; refreshList: () => void 
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-  
+
     setVenueData({
       ...venueData,
       [name]: name === "max_capacity" ? parseInt(value, 10) || 0 : value, // Convert max_capacity to a number
@@ -33,7 +33,7 @@ function VVCard({ venue, refreshList }: { venue: Venue; refreshList: () => void 
         },
         body: JSON.stringify(venueData),
       });
-  
+
       if (response.ok) {
         alert("Venue updated successfully!");
         setIsEditModalOpen(false);
@@ -47,14 +47,14 @@ function VVCard({ venue, refreshList }: { venue: Venue; refreshList: () => void 
       alert("An unexpected error occurred.");
     }
   };
-  
+
   const handleDelete = async () => {
     if (confirm("Are you sure you want to delete this venue?")) {
       try {
         const response = await fetch(`http://127.0.0.1:5000/venues/${venue.id}/delete`, {
           method: "DELETE",
         });
-  
+
         if (response.ok) {
           alert("Venue deleted successfully.");
           refreshList(); // Trigger refresh after deletion
@@ -67,7 +67,7 @@ function VVCard({ venue, refreshList }: { venue: Venue; refreshList: () => void 
       }
     }
   };
-  
+
 
   return (
     <div>
@@ -114,6 +114,11 @@ function VVCard({ venue, refreshList }: { venue: Venue; refreshList: () => void 
                   Delete Venue
                 </Button>
               </>
+            )}
+            {role === "event-host" && (
+              <Button size="sm" variant="default">
+                Details
+              </Button>
             )}
           </CardFooter>
         </Card>

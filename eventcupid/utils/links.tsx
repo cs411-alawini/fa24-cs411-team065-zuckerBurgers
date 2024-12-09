@@ -16,14 +16,14 @@ export const EventHostLinks: NavLink[] = [
   },
   {
     href: "/searchVendorVenues",
-    label: "Search Vendors",
+    label: "Venues",
     icon: <AppWindow />,
-  },
-  {
-    href: "/negotiate",
-    label: "Negotiate",
-    icon: <AreaChart />,
-  },
+  }
+//   {
+//     href: "/negotiate",
+//     label: "Negotiate",
+//     icon: <AreaChart />,
+//   },
 ];
 
 export const VenueLinks: NavLink[] = [
@@ -31,33 +31,23 @@ export const VenueLinks: NavLink[] = [
     href: "/postVenue",
     label: "Post Venue",
     icon: <Layers />,
-  },
-  {
-    href: "/CreateBundles",
-    label: "Create Bundles",
-    icon: <AppWindow />,
-  },
-  {
-    href: "/negotiate",
-    label: "Negotiate",
-    icon: <AreaChart />,
-  },
+  }
+//   {
+//     href: "/negotiate",
+//     label: "Negotiate",
+//     icon: <AreaChart />,
+//   },
 ];
 
 export const VendorLinks: NavLink[] = [
   {
     href: "/postVendor",
-    label: "Post Vendor",
+    label: "Vendors",
     icon: <Layers />,
-  },
-  {
-    href: "/CreateBundles",
-    label: "Create Bundles",
-    icon: <AppWindow />,
-  },
-  {
-    href: "/negotiate",
-    label: "Negotiate",
-    icon: <AreaChart />,
-  },
+  }
+//   {
+//     href: "/negotiate",
+//     label: "Negotiate",
+//     icon: <AreaChart />,
+//   },
 ];

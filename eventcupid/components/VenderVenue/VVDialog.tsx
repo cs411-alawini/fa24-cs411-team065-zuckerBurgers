@@ -41,7 +41,7 @@ function VVDialog({ venue, role, children, isOpen, onClose }: VVDialogProps) {
           </div>
           {role === "event-host" && (
             <div className="flex justify-end">
-              <Button variant="default">Negotiate</Button>
+              <Button variant="default">Contact</Button>
             </div>
           )}
         </div>
