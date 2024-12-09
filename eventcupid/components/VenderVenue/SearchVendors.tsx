@@ -4,26 +4,27 @@ import React, { useState } from 'react';
 function SearchVendors() {
   const [category, setCategory] = useState<string>('');
   const [budget, setBudget] = useState<number | string>('');
+  const [name, setName] = useState<string>('');
   const [vendors, setVendors] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string>('');
 
-  // Dark mode color scheme
+  // Styles for the component
   const containerStyle: React.CSSProperties = {
     maxWidth: '600px',
     margin: 'auto',
     padding: '20px',
-    backgroundColor: '#2C2C2C', // Dark background
+    backgroundColor: '#2C2C2C',
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    color: '#E0E0E0', // Light text color
+    color: '#E0E0E0',
   };
 
   const titleStyle: React.CSSProperties = {
     textAlign: 'center',
     marginBottom: '20px',
     fontSize: '1.5em',
-    color: '#FFFFFF', // White for better contrast
+    color: '#FFFFFF',
   };
 
   const formGroupStyle: React.CSSProperties = {
@@ -34,16 +35,16 @@ function SearchVendors() {
     display: 'block',
     marginBottom: '5px',
     fontWeight: 'bold',
-    color: '#D1D1D1', // Light gray
+    color: '#D1D1D1',
   };
 
   const inputStyle: React.CSSProperties = {
     width: '100%',
     padding: '10px',
-    border: '1px solid #444', // Darker gray border
+    border: '1px solid #444',
     borderRadius: '5px',
-    backgroundColor: '#3A3A3A', // Dark input background
-    color: '#E0E0E0', // Light text color in input
+    backgroundColor: '#3A3A3A',
+    color: '#E0E0E0',
     fontSize: '1em',
   };
 
@@ -51,8 +52,8 @@ function SearchVendors() {
     width: '100%',
     padding: '10px',
     border: 'none',
-    backgroundColor: '#007BFF', // Blue button
-    color: '#FFFFFF', // White text on button
+    backgroundColor: '#007BFF',
+    color: '#FFFFFF',
     borderRadius: '5px',
     fontSize: '1em',
     cursor: 'pointer',
@@ -60,12 +61,12 @@ function SearchVendors() {
   };
 
   const buttonLoadingStyle: React.CSSProperties = {
-    backgroundColor: '#6c757d', // Gray button when loading
+    backgroundColor: '#6c757d',
     cursor: 'not-allowed',
   };
 
   const errorMessageStyle: React.CSSProperties = {
-    color: '#FF4C4C', // Red for error messages
+    color: '#FF4C4C',
     textAlign: 'center',
     marginTop: '10px',
   };
@@ -76,24 +77,24 @@ function SearchVendors() {
 
   const vendorItemStyle: React.CSSProperties = {
     padding: '10px',
-    borderBottom: '1px solid #444', // Darker separator
+    borderBottom: '1px solid #444',
     marginBottom: '10px',
   };
 
   const vendorNameStyle: React.CSSProperties = {
     fontSize: '1.2em',
-    color: '#00BFFF', // Bright blue for vendor name
+    color: '#00BFFF',
   };
 
   const vendorCategoryStyle: React.CSSProperties = {
     fontStyle: 'italic',
-    color: '#D1D1D1', // Light gray
+    color: '#D1D1D1',
   };
 
   // Function to handle the search request
   const fetchVendors = async () => {
-    if (!category || !budget) {
-      setError('Please provide both category and budget');
+    if (!category && !name && !budget) {
+      setError('Please provide at least one search criterion');
       return;
     }
 
@@ -101,16 +102,24 @@ function SearchVendors() {
     setError('');
 
     try {
-      const response = await fetch(
-        `http://127.0.0.1:5000/venues/search/vendors?category=${encodeURIComponent(category)}&budget=${encodeURIComponent(budget)}`
-      );
+      // Construct query parameters
+      const params = new URLSearchParams();
+      if (category) params.append('category', category);
+      if (name) params.append('name', name);
+      if (budget) params.append('budget', budget.toString());
+
+      const response = await fetch(`http://127.0.0.1:5000/vendors/search?${params.toString()}`);
 
       if (!response.ok) {
         throw new Error('Failed to fetch vendors');
       }
 
       const data = await response.json();
-      setVendors(data);
+      if (data.vendors) {
+        setVendors(data.vendors);
+      } else {
+        setError('No vendors found matching your criteria');
+      }
     } catch (error: unknown) {
       if (error instanceof Error) {
         setError(error.message);
@@ -124,7 +133,18 @@ function SearchVendors() {
 
   return (
     <div style={containerStyle}>
-      <h2 style={titleStyle}>Search Vendors for Me</h2>
+      <h2 style={titleStyle}>Search Vendors</h2>
+      <div style={formGroupStyle}>
+        <label htmlFor="name" style={labelStyle}>Vendor Name:</label>
+        <input
+          id="name"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Enter vendor name"
+          style={inputStyle}
+        />
+      </div>
       <div style={formGroupStyle}>
         <label htmlFor="category" style={labelStyle}>Service Category:</label>
         <select
@@ -168,7 +188,7 @@ function SearchVendors() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {vendors.map((vendor, index) => (
               <li key={index} style={vendorItemStyle}>
-                <strong style={vendorNameStyle}>{vendor.vendor_name}</strong> - <span style={vendorCategoryStyle}>{vendor.service_category}</span>
+                <strong style={vendorNameStyle}>{vendor.name}</strong> - <span style={vendorCategoryStyle}>{vendor.service_category}</span>
                 <p><em>Description:</em> {vendor.description}</p>
                 <p><em>Base Price:</em> ${vendor.base_price}</p>
               </li>
