@@ -42,10 +42,15 @@ export const registerUserInDatabase = async (
     });
 
     const data = await response.json();
-
+    console.log( data)
     if (!response.ok && response.status !== 409) {
-      throw new Error(data.message || "Failed to register user");
+      throw new Error("Failed to register user");
     }
+        // Save the user_id in localStorage upon success
+    if (data.user_id) {
+      localStorage.setItem("user_id", String(Number(data.user_id))); // Ensure it's a number and stored as a string
+    }
+    console.log("User ID:", data.user_id);
 
     return {
       success: true,

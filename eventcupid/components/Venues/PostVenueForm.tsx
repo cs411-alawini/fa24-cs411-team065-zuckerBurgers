@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,20 +21,30 @@ const venueSchema = z.object({
 });
 
 type VenueFormType = z.infer<typeof venueSchema>;
-
 function PostVenueForm() {
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
+  const [userId, setUserId] = useState<number | null>(null);
 
+  // Initialize the form methods first
   const methods = useForm<VenueFormType>({
     resolver: zodResolver(venueSchema),
   });
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = methods;
+  // Destructure form methods
+  const { register, handleSubmit, reset, setValue, formState: { errors } } = methods;
+
+  // Handle user ID and set default form value
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedUserId = localStorage.getItem("user_id");
+      const numericUserId = storedUserId ? Number(storedUserId) : null;
+      setUserId(numericUserId); // Update the state
+      if (numericUserId) {
+        setValue("managerId", numericUserId); // Explicitly set the value in the form
+      }
+      console.log("User ID in post venue form localStorage:", storedUserId);
+    }
+  }, [setValue]);
 
   const onSubmit = async (data: VenueFormType) => {
     console.log("Form Data Submitted:", data);
@@ -46,7 +56,7 @@ function PostVenueForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          manager_id: data.managerId,
+          manager_id: userId, // Use the managerId from the form data
           name: data.venueName,
           address: data.address,
           max_capacity: data.maxCapacity,
@@ -84,8 +94,9 @@ function PostVenueForm() {
             <Input
               id="managerId"
               type="number"
-              placeholder="Enter Manager ID"
-              {...register("managerId", { valueAsNumber: true })}
+              {...register("managerId", { valueAsNumber: true })} // Register with react-hook-form
+              defaultValue={userId || ""} // Provide a default value instead of using value
+              readOnly // Prevent user edits
               className="w-full"
             />
             {errors.managerId && (

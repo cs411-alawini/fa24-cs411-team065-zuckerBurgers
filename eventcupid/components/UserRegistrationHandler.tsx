@@ -12,8 +12,8 @@ export default function UserRegistrationHandler() {
 
   useEffect(() => {
     const registerUserOnce = async () => {
-      const isRegistered = localStorage.getItem(`registered_${user?.id}`);
-      if (!user || !role || isRegistered) return;
+      // const isRegistered = localStorage.getItem(`registered_${user?.id}`);
+      if (!user || !role ) return;
 
       const result = await registerUserInDatabase(user, role);
 
