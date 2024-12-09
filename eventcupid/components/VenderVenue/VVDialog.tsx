@@ -14,11 +14,13 @@ interface VVDialogProps {
   venue: Venue;
   role: string | null;
   children: React.ReactNode;
+  isOpen: boolean; // Add isOpen prop
+  onClose: () => void; // Add onClose callback
 }
 
-function VVDialog({ venue, role, children }: VVDialogProps) {
+function VVDialog({ venue, role, children, isOpen, onClose }: VVDialogProps) {
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogTrigger asChild>
         <div>{children}</div>
       </DialogTrigger>

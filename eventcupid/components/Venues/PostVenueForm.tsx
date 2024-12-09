@@ -21,19 +21,21 @@ const venueSchema = z.object({
 });
 
 type VenueFormType = z.infer<typeof venueSchema>;
-function PostVenueForm() {
+
+type PostVenueFormProps = {
+  onVenueAdded: () => void; // Callback to trigger after a venue is added
+};
+
+function PostVenueForm({ onVenueAdded }: PostVenueFormProps) {
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
   const [userId, setUserId] = useState<number | null>(null);
 
-  // Initialize the form methods first
   const methods = useForm<VenueFormType>({
     resolver: zodResolver(venueSchema),
   });
 
-  // Destructure form methods
   const { register, handleSubmit, reset, setValue, formState: { errors } } = methods;
 
-  // Handle user ID and set default form value
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedUserId = localStorage.getItem("user_id");
@@ -65,7 +67,8 @@ function PostVenueForm() {
 
       if (response.ok) {
         setStatusMessage("Venue added successfully!");
-        reset(); // Reset form fields on success
+        reset(); // Reset the form fields
+        onVenueAdded(); // Notify the parent component to refresh the venues list
       } else {
         const errorData = await response.json();
         setStatusMessage(
@@ -106,7 +109,6 @@ function PostVenueForm() {
             )}
           </div>
 
-          {/* Venue Name */}
           <div>
             <label htmlFor="venueName" className="block font-medium mb-2">
               Venue Name
@@ -125,7 +127,6 @@ function PostVenueForm() {
             )}
           </div>
 
-          {/* Address */}
           <div>
             <label htmlFor="address" className="block font-medium mb-2">
               Address
@@ -144,7 +145,6 @@ function PostVenueForm() {
             )}
           </div>
 
-          {/* Max Capacity */}
           <div>
             <label htmlFor="maxCapacity" className="block font-medium mb-2">
               Max Capacity
@@ -164,12 +164,10 @@ function PostVenueForm() {
           </div>
         </div>
 
-        {/* Submit Button */}
         <Button type="submit" className="mt-6 w-full">
           Add Venue
         </Button>
 
-        {/* Status Message */}
         {statusMessage && (
           <div
             className={`mt-4 p-4 rounded ${
