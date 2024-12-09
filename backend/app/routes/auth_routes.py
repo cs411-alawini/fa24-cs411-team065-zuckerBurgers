@@ -4,7 +4,6 @@ from app.models.vendor import Vendor
 from app.models.venue import Venue
 from app import db
 import logging
-from sqlalchemy import text
 
 # Set up basic logging
 logging.basicConfig(level=logging.DEBUG)
@@ -412,7 +411,7 @@ def get_hot_venues():
 
     except SQLAlchemyError as e:
         # Log error for better debugging (add logging if needed)
-        logger.error(f'An error occurred while fetching hot venues: {str(e)}')
+        logging.error(f'An error occurred while fetching hot venues: {str(e)}')
         return jsonify({'message': 'An error occurred while fetching hot venues', 'error': str(e)}), 500
 
 @bp.route('/venues/upcoming-events', methods=['GET'])
@@ -463,7 +462,7 @@ def get_venues_with_upcoming_events():
         return jsonify(upcoming_event_venue_list), 200
 
     except SQLAlchemyError as e:
-        logger.error(f'An error occurred while fetching venues with upcoming events: {str(e)}')
+        logging.error(f'An error occurred while fetching venues with upcoming events: {str(e)}')
         return jsonify({'message': 'An error occurred while fetching venues with upcoming events', 'error': str(e)}), 500
 
 @bp.route('/users/addid', methods=['POST'])
@@ -577,5 +576,222 @@ def search_suitable_vendors():
         return jsonify(vendor_list), 200
 
     except SQLAlchemyError as e:
-        logger.error(f'An error occurred while searching for suitable vendors: {str(e)}')
+        logging.error(f'An error occurred while searching for suitable vendors: {str(e)}')
         return jsonify({'message': 'An error occurred while searching for suitable vendors', 'error': str(e)}), 500
+
+@bp.route('/venues/<int:manager_id>/all', methods=['GET'])
+def get_venues_by_manager(manager_id):
+    try:
+        # Fetch all venues for the given manager_id
+        query = text("""
+            SELECT VenueID, ManagerID, VenueName, Address, MaxCapacity
+            FROM Venues
+            WHERE ManagerID = :manager_id
+        """)
+        result = db.session.execute(query, {'manager_id': manager_id}).fetchall()
+
+        # If no venues found, return an empty list
+        if not result:
+            return jsonify({'venues': []}), 200
+
+        # Format the result as a list of dictionaries
+        venues = [
+            {
+                'id': row.VenueID,
+                'manager_id': row.ManagerID,
+                'name': row.VenueName,
+                'address': row.Address,
+                'max_capacity': row.MaxCapacity
+            }
+            for row in result
+        ]
+
+        return jsonify({'venues': venues}), 200
+
+    except SQLAlchemyError as e:
+        logging.error(f"SQLAlchemyError: {str(e)}")
+        return jsonify({'message': 'An error occurred while fetching venues'}), 500
+    except Exception as e:
+        logging.error(f"Unexpected error: {str(e)}")
+        return jsonify({'message': 'An unexpected error occurred'}), 500
+
+@bp.route('/venues/<int:venue_id>/delete', methods=['DELETE'])
+def delete_venue(venue_id):
+    try:
+        # Attempt to delete the venue by ID
+        delete_query = text("""
+            DELETE FROM Venues
+            WHERE VenueID = :venue_id
+        """)
+
+        result = db.session.execute(delete_query, {'venue_id': venue_id})
+
+        # Check if any row was deleted
+        if result.rowcount == 0:
+            logging.error(f"Venue with ID {venue_id} not found.")
+            return jsonify({'message': f'Venue with ID {venue_id} not found.'}), 404
+
+        # Commit the deletion to the database
+        db.session.commit()
+
+        logging.info(f"Venue with ID {venue_id} deleted successfully.")
+        return jsonify({'message': 'Venue deleted successfully'}), 200
+
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        logging.error(f"SQLAlchemyError: {str(e)}")
+        return jsonify({'message': 'An error occurred while deleting the venue'}), 500
+    except Exception as e:
+        logging.error(f"Unexpected error: {str(e)}")
+        return jsonify({'message': 'An unexpected error occurred'}), 500
+    
+# @bp.route('/events/add', methods=['POST'])
+# def add_new_event():
+#     try:
+#         # Extract and validate input from JSON request
+#         event_id = request.json.get('event_id')
+#         event_name = request.json.get('event_name')
+#         venue_id = request.json.get('venue_id')
+#         organizer_id = request.json.get('organizer_id')
+#         event_type = request.json.get('event_type')
+#         event_date = request.json.get('event_date')
+#         budget = request.json.get('budget')
+#         description = request.json.get('description')
+#
+#         # Check for missing fields
+#         if not all([event_id, event_name, venue_id, organizer_id, event_type, event_date, budget, description]):
+#             return jsonify({'message': 'All fields (event_id, event_name, venue_id, organizer_id, event_type, event_date, budget, description) are required'}), 400
+#
+#         # Typecasting and additional validation
+#         try:
+#             event_id = int(event_id)
+#             venue_id = int(venue_id)
+#             organizer_id = int(organizer_id)
+#             budget = float(budget)
+#         except ValueError:
+#             return jsonify({'message': 'Invalid data types for event_id, venue_id, organizer_id, or budget. Ensure they are correct.'}), 400
+#
+#         # Prepare SQL query
+#         sql_query = """
+#         CALL AddNewEvent(:event_id, :event_name, :venue_id, :organizer_id, :event_type, :event_date, :budget, :description);
+#         """
+#
+#         # Execute the stored procedure
+#         db.session.execute(
+#             text(sql_query),
+#             {
+#                 'event_id': event_id,
+#                 'event_name': event_name,
+#                 'venue_id': venue_id,
+#                 'organizer_id': organizer_id,
+#                 'event_type': event_type,
+#                 'event_date': event_date,
+#                 'budget': budget,
+#                 'description': description
+#             }
+#         )
+#
+#         # Commit the transaction
+#         db.session.commit()
+#
+#         return jsonify({'message': 'Event added successfully'}), 201
+#
+#     except SQLAlchemyError as e:
+#         # Log the error for debugging purposes
+#         logging.error(f'An error occurred while adding the event: {str(e)}')
+#
+#         # Return a meaningful error response
+#         return jsonify({'message': 'An error occurred while adding the event', 'error': str(e)}), 500
+#
+#     except Exception as e:
+#         # Catch any unexpected errors
+#         logging.error(f'Unexpected error: {str(e)}')
+#         return jsonify({'message': 'An unexpected error occurred', 'error': str(e)}), 500
+
+@bp.route('/events/add', methods=['POST'])
+def add_new_event():
+    try:
+        # Extract and validate input from JSON request
+        event_id = int(request.json.get('event_id'))
+        event_name = str(request.json.get('event_name'))
+        venue_id = int(request.json.get('venue_id'))
+        organizer_id = int(request.json.get('organizer_id'))
+        event_type = str(request.json.get('event_type'))
+        event_date = str(request.json.get('event_date'))  # Ensure date is a string in 'YYYY-MM-DD'
+        budget = float(request.json.get('budget'))
+        description = str(request.json.get('description'))
+
+        # Check for missing or invalid fields
+        if not all([event_id, event_name, venue_id, organizer_id, event_type, event_date, budget, description]):
+            return jsonify({
+                'message': 'All fields (event_id, event_name, venue_id, organizer_id, event_type, event_date, budget, description) are required.'
+            }), 400
+
+        # Call the stored procedure with the correct syntax
+        sql_query = text("""
+        CALL AddNewEvent(:event_id, :event_name, :venue_id, :organizer_id, :event_type, :event_date, :budget, :description);
+        """)
+
+        # Execute the stored procedure
+        db.session.execute(
+            sql_query,
+            {
+                'event_id': event_id,
+                'event_name': event_name,
+                'venue_id': venue_id,
+                'organizer_id': organizer_id,
+                'event_type': event_type,
+                'event_date': event_date,
+                'budget': budget,
+                'description': description
+            }
+        )
+
+        # Commit the transaction
+        db.session.commit()
+
+        return jsonify({'message': 'Event added successfully'}), 201
+
+    except ValueError as ve:
+        # Handle invalid input types
+        logging.error(f"ValueError occurred: {str(ve)}")
+        return jsonify({'message': 'Invalid input data type', 'error': str(ve)}), 400
+
+    except SQLAlchemyError as e:
+        # Log and return a meaningful error message for SQLAlchemy errors
+        logging.error(f'An error occurred while adding the event: {str(e)}')
+        return jsonify({'message': 'An error occurred while adding the event', 'error': str(e)}), 500
+
+@bp.route('/users/<int:user_id>', methods=['GET'])
+def get_user_contact_info(user_id):
+    try:
+        # Query to fetch the user details by UserID
+        sql_query = text("""
+        SELECT UserID, Username, Email, PhoneNumber
+        FROM Users
+        WHERE UserID = :user_id;
+        """)
+
+        # Execute the query
+        result = db.session.execute(
+            sql_query,
+            {'user_id': user_id}
+        ).fetchone()
+
+        if result is None:
+            return jsonify({'message': 'User not found'}), 404
+
+        # Format the result as a dictionary
+        user_data = {
+            'UserID': result.UserID,
+            'Username': result.Username,
+            'Email': result.Email,
+            'PhoneNumber': result.PhoneNumber
+        }
+
+        return jsonify(user_data), 200
+
+    except SQLAlchemyError as e:
+        # Log the error
+        logging.error(f'An error occurred while fetching user contact info: {str(e)}')
+        return jsonify({'message': 'An error occurred while fetching user contact info', 'error': str(e)}), 500
