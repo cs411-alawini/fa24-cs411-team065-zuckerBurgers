@@ -795,3 +795,47 @@ def get_user_contact_info(user_id):
         # Log the error
         logging.error(f'An error occurred while fetching user contact info: {str(e)}')
         return jsonify({'message': 'An error occurred while fetching user contact info', 'error': str(e)}), 500
+
+@bp.route('/vendors/search', methods=['GET'])
+def search_vendors():
+    try:
+        # Extract query parameters
+        name = request.args.get('name', None)  # Vendor name keyword
+        category = request.args.get('category', None)  # Service category
+
+        # Build the query
+        query = Vendor.query
+
+        # Apply filters
+        if name:
+            query = query.filter(Vendor.VendorName.ilike(f'%{name}%'))  # Case-insensitive match
+        if category:
+            query = query.filter(Vendor.ServiceCategory.ilike(f'%{category}%'))  # Case-insensitive match
+
+        # Execute the query
+        results = query.all()
+
+        # Check if results are found
+        if not results:
+            return jsonify({'message': 'No vendors found matching your criteria'}), 404
+
+        # Format the response
+        vendors = [
+            {
+                'id': vendor.VendorID,
+                'name': vendor.VendorName,
+                'service_category': vendor.ServiceCategory,
+                'description': vendor.Description,
+                'base_price': float(vendor.BasePrice),
+            }
+            for vendor in results
+        ]
+
+        return jsonify({'message': 'Vendors found', 'vendors': vendors}), 200
+
+    except SQLAlchemyError as e:
+        logging.error(f"SQLAlchemyError: {str(e)}")
+        return jsonify({'message': 'An error occurred while searching for vendors'}), 500
+    except Exception as e:
+        logging.error(f"Unexpected error: {str(e)}")
+        return jsonify({'message': 'An unexpected error occurred'}), 500
