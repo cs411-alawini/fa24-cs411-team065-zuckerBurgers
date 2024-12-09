@@ -336,3 +336,246 @@ def edit_venue(venue_id):
     except Exception as e:
         logging.error(f"Unexpected error: {str(e)}")
         return jsonify({'message': 'An unexpected error occurred'}), 500
+
+
+@bp.route('/venues/hot', methods=['GET'])
+def get_hot_venues():
+    try:
+        # Raw SQL query for fetching hot venues with all relevant details
+        sql_query = """
+        SELECT 
+            v.VenueID,
+            v.ManagerID,
+            v.VenueName,
+            v.Address,
+            v.MaxCapacity,
+            AVG(r.Rating) AS AvgRating,
+            COUNT(r.ReviewID) AS ReviewCount,
+            SUM(s.Price) AS TotalServiceCost,
+            (SELECT COUNT(*) 
+             FROM Events e 
+             JOIN Users u ON e.OrganizerID = u.UserID
+             WHERE e.VenueID = v.VenueID 
+               AND e.EventDate >= '2024-01-01'
+            ) AS RecentOrganizerEvents
+        FROM 
+            Venues v
+        JOIN 
+            Reviews r ON v.VenueID = r.VenueID
+        JOIN 
+            Services s ON s.BundleID IN (
+                SELECT BundleID 
+                FROM ServiceBundles
+                WHERE BundlePrice > 50
+            )
+        WHERE 
+            v.MaxCapacity > 50
+            AND r.ReviewDate >= '2024-09-10'
+            AND r.Rating >= 2
+        GROUP BY 
+            v.VenueID, v.ManagerID, v.VenueName, v.Address, v.MaxCapacity
+        HAVING 
+            AVG(r.Rating) >= 2.0
+            AND RecentOrganizerEvents >= 2
+            AND TotalServiceCost > 100
+        ORDER BY 
+            AvgRating DESC, 
+            ReviewCount DESC
+        LIMIT 15;
+        """
+
+        # Execute the raw SQL query
+        result = db.session.execute(text(sql_query))
+        venues = result.fetchall()
+
+        # Check if any venues were returned
+        if not venues:
+            return jsonify({'message': 'No hot venues found'}), 404
+
+        # Format data for the response
+        hot_venue_list = [
+            {
+                'id': venue[0],  # VenueID
+                'manager_id': venue[1],  # ManagerID
+                'name': venue[2],  # VenueName
+                'address': venue[3],  # Address
+                'max_capacity': venue[4],  # MaxCapacity
+                'average_rating': float(venue[5]),  # AvgRating
+                'review_count': int(venue[6]),  # ReviewCount
+                'total_service_cost': float(venue[7]),  # TotalServiceCost
+                'recent_organizer_events': int(venue[8]),  # RecentOrganizerEvents
+            }
+            for venue in venues
+        ]
+
+        return jsonify(hot_venue_list), 200
+
+    except SQLAlchemyError as e:
+        # Log error for better debugging (add logging if needed)
+        logger.error(f'An error occurred while fetching hot venues: {str(e)}')
+        return jsonify({'message': 'An error occurred while fetching hot venues', 'error': str(e)}), 500
+
+@bp.route('/venues/upcoming-events', methods=['GET'])
+def get_venues_with_upcoming_events():
+    try:
+        # Raw SQL query selecting only required fields
+        sql_query = """
+        SELECT 
+            v.VenueID AS id,          -- Venue ID
+            v.ManagerID AS manager_id, -- Manager ID
+            v.VenueName AS name,      -- Venue Name
+            v.Address AS address,     -- Venue Address
+            v.MaxCapacity AS max_capacity -- Venue Capacity
+        FROM 
+            Venues v
+        JOIN 
+            Events e ON v.VenueID = e.VenueID
+        WHERE 
+            v.MaxCapacity > 100  -- venues with capacity greater than 100
+            AND e.EventDate >= '2024-09-17'  -- Filter for upcoming events
+        GROUP BY 
+            v.VenueID, v.ManagerID, v.VenueName, v.Address, v.MaxCapacity
+        ORDER BY 
+            COUNT(e.EventID) DESC  -- Order by total events
+        LIMIT 15;
+        """
+
+        # Execute the raw SQL query
+        result = db.session.execute(text(sql_query))
+        venues = result.fetchall()
+
+        # Check if any venues were returned
+        if not venues:
+            return jsonify({'message': 'No venues with upcoming events found'}), 404
+
+        # Format data for the response
+        upcoming_event_venue_list = [
+            {
+                'id': venue.id,             # Venue ID
+                'manager_id': venue.manager_id,  # Manager ID
+                'name': venue.name,         # Venue Name
+                'address': venue.address,   # Venue Address
+                'max_capacity': venue.max_capacity,  # Max Capacity
+            }
+            for venue in venues
+        ]
+
+        return jsonify(upcoming_event_venue_list), 200
+
+    except SQLAlchemyError as e:
+        logger.error(f'An error occurred while fetching venues with upcoming events: {str(e)}')
+        return jsonify({'message': 'An error occurred while fetching venues with upcoming events', 'error': str(e)}), 500
+
+@bp.route('/users/addid', methods=['POST'])
+def add_user():
+    try:
+        print("Route triggered!")  # Add a print statement as a minimal log
+        logging.debug("Debug: Route hit!")
+        data = request.get_json()
+        logging.debug(f"Received data: {data}")
+
+        # Required fields check
+        required_fields = ['clerk_id', 'username', 'email', 'phone_number', 'user_type']
+        missing_fields = [field for field in required_fields if field not in data]
+        if missing_fields:
+            return jsonify({'message': f'Missing fields: {", ".join(missing_fields)}'}), 400
+
+        # Check if user exists by email
+        check_query = text("""
+            SELECT UserID, Email FROM Users 
+            WHERE Email = :email
+        """)
+        logging.debug("Check Query is about to hit!")
+        result = db.session.execute(check_query, {
+            'email': data['email']
+        }).fetchone()
+        logging.debug(f"Received data: {result}")
+
+        if result:
+            user_id, email = result  # Unpack the result tuple
+            return jsonify({
+                'message': 'Email already exists',
+                'user_id': user_id,
+                'email': email,
+                'clerk_id': data['clerk_id']
+            }), 409
+
+        # Generate new UserID (get max UserID and add 1)
+        max_id_query = text("SELECT MAX(UserID) as max_id FROM Users")
+        max_id_result = db.session.execute(max_id_query).fetchone()
+        new_user_id = (max_id_result.max_id or 1000) + 1  # Start from 1001 if table is empty
+
+        # Validate user type
+        if data['user_type'] not in ['Organizer', 'Manager']:
+            return jsonify({'message': 'Invalid user type'}), 400
+
+        # Insert new user with generated numeric ID
+        insert_query = text("""
+            INSERT INTO Users (UserID, Username, Email, PhoneNumber, UserType)
+            VALUES (:user_id, :username, :email, :phone_number, :user_type)
+        """)
+
+        db.session.execute(insert_query, {
+            'user_id': new_user_id,  # Use generated numeric ID
+            'username': data['username'],
+            'email': data['email'],
+            'phone_number': data['phone_number'],
+            'user_type': data['user_type']
+        })
+        db.session.commit()
+
+        return jsonify({
+            'message': 'User added successfully',
+            'user_id': new_user_id,
+            'clerk_id': data['clerk_id']
+        }), 201
+
+    except IntegrityError as e:
+        db.session.rollback()
+        logging.error(f"IntegrityError: {str(e)}")
+        return jsonify({'message': 'Database integrity error'}), 409
+    except Exception as e:
+        db.session.rollback()
+        logging.error(f"Unexpected error: {str(e)}")
+        return jsonify({'message': str(e)}), 500
+
+@bp.route('/venues/search/vendors', methods=['GET'])
+def search_suitable_vendors():
+    try:
+        # Extracting query parameters from the request
+        max_base_price = request.args.get('budget', type=float)
+        desired_service_category = request.args.get('category', type=str)
+
+        # Check if both parameters are provided
+        if max_base_price is None or desired_service_category is None:
+            return jsonify({'message': 'Both category and budget must be provided'}), 400
+
+        # SQL query to call the stored procedure
+        sql_query = """
+        CALL GetSuitableVendors(:max_base_price, :desired_service_category);
+        """
+
+        # Execute the query with parameters
+        result = db.session.execute(text(sql_query), {'max_base_price': max_base_price, 'desired_service_category': desired_service_category})
+        vendors = result.fetchall()
+
+        # Check if any vendors were found
+        if not vendors:
+            return jsonify({'message': 'No suitable vendors found for the given filters'}), 404
+
+        # Format the response
+        vendor_list = [
+            {
+                'vendor_name': vendor.VendorName,
+                'service_category': vendor.ServiceCategory,
+                'base_price': float(vendor.BasePrice),
+                'description': vendor.Description,
+            }
+            for vendor in vendors
+        ]
+
+        return jsonify(vendor_list), 200
+
+    except SQLAlchemyError as e:
+        logger.error(f'An error occurred while searching for suitable vendors: {str(e)}')
+        return jsonify({'message': 'An error occurred while searching for suitable vendors', 'error': str(e)}), 500
